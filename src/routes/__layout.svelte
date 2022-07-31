@@ -38,7 +38,7 @@
 		</div>
 		<Footer />
 	</div>
-{:else if path !== '/' && !path.includes('egghead-discord')}
+{:else if path !== '/' && !path.includes('egghead-discord') && !path.includes('resume')}
 	<div id="app-layout" class="grid w-auto min-h-screen max-h-full bg-black transition">
 		<Nav>
 			<slot />
