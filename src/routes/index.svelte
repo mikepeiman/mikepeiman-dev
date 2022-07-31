@@ -85,11 +85,17 @@
 >
 	<section class="articles md:grid md:articles-change w-full px-4 md:px-6 lg:px-0 self-center  p-3">
 		<div class="intro flex flex-col text-lg md:pr-12 lg:pr-18 xl:pr-24 xl:text-xl">
-			<h1 class="text-4xl lg:text-6xl font-bold font-display text-winterblues-300">
-				Hi, I'm Mike.
-			</h1>
-			<p class="intro-body mt-3 font-light text-lg md:text-xl xl:text-2xl leading-snug md:leading-relaxed font-montserrat">
-				I'm a creative software developer, and this is my professional blog. I love
+			<div class="flex justify-between">
+				<h1 class="text-4xl lg:text-6xl font-bold font-display text-winterblues-300">
+					Hi, I'm Mike.
+				</h1>
+				<div class="p-2 m-4 ml-14 -mt-1  bg-winterblues-400 resume self-end">See my resume</div>
+			</div>
+			<p
+				class="intro-body mt-3 font-light text-lg md:text-xl xl:text-2xl leading-snug md:leading-relaxed font-montserrat"
+			>
+				I'm a creative software developer (primarily front-end, but have some fullstack experience),
+				and this is my professional blog & portfolio. I love
 				<span class="font-bold italic color-1">user experience</span> and design that helps realize
 				human potential. I follow a
 				<span class="font-bold italic color-2">first-principles</span>
@@ -126,8 +132,8 @@
 					<p class="li-snippet text-base lg:text-lg mt-3 font-light ml-3 xl:text-xl">
 						Augment words and iconography with <span class="italic color-1 font-medium">color</span>
 						and structure - <span class="italic color-2 font-medium">draw the eye</span> to key points
-						and relationships. Effectively use negative space, layout and structure, diagrams and images
-						to communicate beyond mere words.
+						and relationships. Effectively use negative space, proximity, layout and structure, diagrams
+						and images to communicate beyond words.
 					</p>
 				</li>
 			</ol>
@@ -239,7 +245,11 @@
 		</div>
 		<div class="projects-group min-w-0 shrink  md:grid w-full flex flex-col mb-12">
 			{#each projects as project}
-				<a href={`${project.url}`} class="project-card-link no-underline flex my-3 md:mx-3" target="_blank">
+				<a
+					href={`${project.url}`}
+					class="project-card-link no-underline flex my-3 md:mx-3"
+					target="_blank"
+				>
 					<!-- make a 'projects' directory for these -->
 					<div
 						class="project-card card rounded-md transition-all  bg-gray-900 hover:bg-sky-800/[0.5] flex flex-col  md:flex-col-reverse md:justify-between lg:flex-col lg:justify-start p-5 lg:p-7 rounded-md  hover:-translate-x-2 md:hover:-translate-y-2 md:hover:translate-x-0"
@@ -252,12 +262,15 @@
 								>
 							{/each} -->
 							{#if project.tags}
-								<div class="mb-4 -mt-2 lg:mb-4 lg:-mt-2 md:mb-2 md:mt-2 space-x-2 flex flex-wrap justify-start align-start">
+								<div
+									class="mb-4 -mt-2 lg:mb-4 lg:-mt-2 md:mb-2 md:mt-2 space-x-2 flex flex-wrap justify-start align-start"
+								>
 									{#each project.tags as tag}
 										<div
 											class="project-tag font-light font-montserrat mt-1 whitespace-nowrap px-2 py-1 rounded bg-fuchsia-900/[0.5] text-yellow-300/[0.75]"
-											>{tag}</div
 										>
+											{tag}
+										</div>
 									{/each}
 								</div>
 							{/if}
@@ -521,6 +534,57 @@
 		// box-shadow: 0px 0px 3px 3px rgba(255,255,255,0.25);
 		.author {
 			color: var(--color-gray-300);
+		}
+	}
+	.resume {
+		width: 20ch;
+		font-family: 'Montserrat', sans-serif;
+		text-align: center;
+		// line-height: 0em;
+		background: linear-gradient(
+					90deg,
+					rgba(0, 0, 0, .5) 0%,
+					rgba(0, 0, 0, 0.75) 15%,
+					rgba(0, 0, 0, 0.75) 85%,
+					rgba(0, 0, 0, 0.5) 100%
+				)
+				padding-box,
+			linear-gradient(
+				120deg,
+				var(--color-emerald-500) 10%,
+				var(--color-amber-500) 25%,
+				var(--color-rose-500) 50%,
+				var(--color-fuchsia-500) 75%,
+				var(--color-winterblues-400) 90%
+			);
+
+		// linear-gradient(
+		// 		120deg,
+		// 		rgba(131, 58, 180, 1) 10%,
+		// 		rgba(47, 174, 177, 1) 22%,
+		// 		rgba(253, 29, 29, 1) 50%,
+		// 		rgba(191, 252, 55, 1) 72%,
+		// 		rgba(252, 176, 69, 1) 90%
+		// 	)
+		// 	border-box;
+		// linear-gradient(to right, var(--color-winterblues-600), var(--color-deepreds-900)) border-box;
+		border-radius: 0.25rem;
+		border: 3px solid transparent;
+		transition: all 0.25s;
+		// box-shadow: 0px 0px 3px 3px rgba(255,255,255,0.25);
+		&:hover {
+			// background: linear-gradient(rgba(0, 0, 0, 0.05), rgba(0, 0, 0, 0.25)) padding-box,
+			// linear-gradient(
+			// 	120deg,
+			// 	var(--color-emerald-500) 10%,
+			// 	var(--color-amber-500) 25%,
+			// 	var(--color-rose-500) 50%,
+			// 	var(--color-fuchsia-500) 75%,
+			// 	var(--color-winterblues-400) 90%
+			// );
+			cursor: pointer;
+			border: 3px solid rgba(255, 255, 255, 0.75);
+			// transform: scale(1.1);
 		}
 	}
 
