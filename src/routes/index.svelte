@@ -89,7 +89,7 @@
 				<h1 class="text-4xl lg:text-6xl font-bold font-display text-winterblues-300">
 					Hi, I'm Mike.
 				</h1>
-				<a href="/resume" class="p-2 m-4 ml-14 -mt-1  bg-winterblues-400 resume self-end">See my resume</a>
+				<!-- <a href="/resume" class="p-2 m-4 ml-14 -mt-1  bg-winterblues-400 resume self-end">See my resume</a> -->
 			</div>
 			<p
 				class="intro-body mt-3 font-light text-lg md:text-xl xl:text-2xl leading-snug md:leading-relaxed font-montserrat"
