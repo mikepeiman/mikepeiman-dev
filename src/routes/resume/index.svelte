@@ -80,8 +80,10 @@
 			skills_applied: ['Frontend Design', 'Version control', 'Web scraping',],
             date_begun: "",
             date_completed: "",
-            date_single: "Jan 2022",
-            inspired_by: [{name: "Crinkle.dev", url: "https://www.crinkle.dev" },]
+            date_single: "Oct 2018",
+            inspired_by: [{name: "Crinkle.dev", url: "https://www.crinkle.dev" },],
+            completion_MVP: 100,
+            completion_total: 80
 		}
 	];
 
