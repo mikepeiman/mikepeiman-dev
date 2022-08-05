@@ -34,9 +34,9 @@
 				'Custom-built in Sapper; my most ambitious project thus far in terms of number of LOC (approx. 9,500) and features and UI. Dec 2019 - Jan 2020',
 			technologies_used: ['Svelte', 'TailwindCSS', 'GitHub', 'GraphCMS/HyGraph'],
 			skills_applied: ['Frontend Design', 'Version control', 'Text parsing', 'API access'],
-            date_begun: "",
-            date_completed: "",
-            date_single: "Jan 2022",
+            date_begun: "Dec 2019",
+            date_completed: "Feb 2020",
+            date_single: "",
             inspired_by: [{name: "Crinkle.dev", url: "https://www.crinkle.dev" },]
 		},
 		{
@@ -57,7 +57,7 @@
 			skills_applied: ['Frontend Design', 'Version control', 'Text parsing', 'API access'],
             date_begun: "",
             date_completed: "",
-            date_single: "Jan 2022",
+            date_single: "Feb 2022",
             inspired_by: [{name: "Crinkle.dev", url: "https://www.crinkle.dev" },]
 		},
 		{
@@ -66,6 +66,18 @@
 				"A remake of a classic 1990's text-based MUD. Early stages WIP. Using SvelteKit, DOM manipulation",
 			technologies_used: ['Svelte', 'TailwindCSS', ],
 			skills_applied: ['Frontend Design', 'Version control', 'Text parsing', 'API access'],
+            date_begun: "",
+            date_completed: "",
+            date_single: "Jan 2022",
+            inspired_by: [{name: "Crinkle.dev", url: "https://www.crinkle.dev" },]
+		},
+
+		{
+			name: 'DOTA2 Hero Stats viewer',
+			description:
+				"An app to sort and filter DOTA heroes by stats, allowing the user to see, for example, total attribute gain per level. Data scraped from a public DOTA2 website.",
+			technologies_used: ['Vue', 'SCSS', 'Cheerio' ],
+			skills_applied: ['Frontend Design', 'Version control', 'Web scraping',],
             date_begun: "",
             date_completed: "",
             date_single: "Jan 2022",
