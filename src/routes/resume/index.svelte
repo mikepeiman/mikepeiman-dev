@@ -50,10 +50,21 @@
             inspired_by: [{name: "Crinkle.dev", url: "https://www.crinkle.dev" },]
 		},
 		{
-			name: 'Pax Galaxia clone',
+			name: 'Pax Galaxia redux',
 			description:
-				'A Pax Galaxia (older desktop game) clone, early stages WIP. Using SvelteKit, HTML5 Canvas',
+				'A Pax Galaxia (older desktop game) clone, early stages WIP. Using SvelteKit, HTML5 Canvas.',
 			technologies_used: ['Svelte', 'TailwindCSS', 'GitHub', 'GraphCMS/HyGraph'],
+			skills_applied: ['Frontend Design', 'Version control', 'Text parsing', 'API access'],
+            date_begun: "",
+            date_completed: "",
+            date_single: "Jan 2022",
+            inspired_by: [{name: "Crinkle.dev", url: "https://www.crinkle.dev" },]
+		},
+		{
+			name: 'TW2002 redux',
+			description:
+				"A remake of a classic 1990's text-based MUD. Early stages WIP. Using SvelteKit, DOM manipulation",
+			technologies_used: ['Svelte', 'TailwindCSS', ],
 			skills_applied: ['Frontend Design', 'Version control', 'Text parsing', 'API access'],
             date_begun: "",
             date_completed: "",
@@ -61,6 +72,15 @@
             inspired_by: [{name: "Crinkle.dev", url: "https://www.crinkle.dev" },]
 		}
 	];
+
+    const tech_skills = [
+        {name: "GitHub", level: 7},
+        {name: "DOM manipulation", level: 7},
+        {name: "Text parsing", level: 7},
+        {name: "SVG", level: 7},
+        {name: "CSS", level: 7},
+        {name: "SCSS", level: 7},
+    ]
 </script>
 
 <div class="flex flex-col w-full items-center">
@@ -111,8 +131,17 @@
                     <div class="italic border-b-2 border-opacity-100 border-orange-500">Description:</div>
                     <div class="text-base ml-4">{item.description}</div>
                 </div>
-				<div class="content-item tech-list">{item.technologies_used}</div>
-				<div class="content-item skills-list">{item.skills_applied}</div>
+                <div class="content-item tech-list flex">
+                {#each item.technologies_used as tech}
+
+				<div class="mr-2 px-2 bg-slate-500 rounded-sm">{tech}</div>
+                {/each}
+            </div>
+				<div class="content-item skills-list flex">
+                    {#each item.skills_applied as skill}
+                    <div class="px-2 mr-2 bg-cyan-800 rounded-sm">{skill}</div>
+                    {/each}
+</div>
 			</li>
 		{/each}
 	</ul>
