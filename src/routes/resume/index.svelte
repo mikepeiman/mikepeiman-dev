@@ -31,7 +31,7 @@
 		{
 			name: 'Super-tic-tac-toe',
 			description:
-				'custom-built in Sapper; my most ambitious project thus far in terms of number of LOC (approx. 9,500) and features and UI. Dec 2019 - Jan 2020',
+				'Custom-built in Sapper; my most ambitious project thus far in terms of number of LOC (approx. 9,500) and features and UI. Dec 2019 - Jan 2020',
 			technologies_used: ['Svelte', 'TailwindCSS', 'GitHub', 'GraphCMS/HyGraph'],
 			skills_applied: ['Frontend Design', 'Version control', 'Text parsing', 'API access'],
             date_begun: "",
@@ -41,7 +41,7 @@
 		},
 		{
 			name: 'Discord clone',
-			description: 'from an Egghead tutorial using React, I adapted it to SvelteKit framework.',
+			description: 'From an Egghead tutorial using React, I adapted it to SvelteKit framework.',
 			technologies_used: ['Svelte', 'TailwindCSS', 'GitHub', 'GraphCMS/HyGraph'],
 			skills_applied: ['Frontend Design', 'Version control', 'Text parsing', 'API access'],
             date_begun: "",
@@ -52,7 +52,7 @@
 		{
 			name: 'Pax Galaxia clone',
 			description:
-				'a Pax Galaxia (older desktop game) clone, early stages WIP. Using SvelteKit, HTML5 Canvas',
+				'A Pax Galaxia (older desktop game) clone, early stages WIP. Using SvelteKit, HTML5 Canvas',
 			technologies_used: ['Svelte', 'TailwindCSS', 'GitHub', 'GraphCMS/HyGraph'],
 			skills_applied: ['Frontend Design', 'Version control', 'Text parsing', 'API access'],
             date_begun: "",
@@ -107,9 +107,12 @@
 		{#each resume_items as item}
 			<h3>{item.name}</h3>
 			<li>
-				<div class="content-item">{item.description}</div>
-				<div class="content-item">{item.technologies_used}</div>
-				<div class="content-item">{item.skills_applied}</div>
+				<div class="content-item description font-montserrat text-xl flex items-end ">
+                    <div class="italic border-b-2 border-opacity-100 border-orange-500">Description:</div>
+                    <div class="text-base ml-4">{item.description}</div>
+                </div>
+				<div class="content-item tech-list">{item.technologies_used}</div>
+				<div class="content-item skills-list">{item.skills_applied}</div>
 			</li>
 		{/each}
 	</ul>
@@ -158,6 +161,9 @@
 
 	.content-item {
 		padding: 0.5rem 1.5rem;
+        &.description {
+
+        }
 	}
 
 	.content-item:first-of-type {
