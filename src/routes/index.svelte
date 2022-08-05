@@ -84,12 +84,12 @@
 	class="homepage bg-black flex flex-col self-center justify-items-center items-center w-full lg:text-sm lg:px-12 xl:px-24 2xl:w-4/5 2xl:px-12 3xl:w-3/4 3xl:px-36 mt-4 md:mt-20"
 >
 	<section class="articles md:grid md:articles-change w-full px-4 md:px-6 lg:px-0 self-center  p-3">
-		<div class="intro flex flex-col text-lg md:pr-12 lg:pr-18 xl:pr-24 xl:text-xl">
+		<div class="intro flex flex-col text-lg md:pr-12 lg:pr-18 xl:pr-24 xl:text-xl ">
 			<div class="flex justify-between">
 				<h1 class="text-4xl lg:text-6xl font-bold font-display text-winterblues-300">
 					Hi, I'm Mike.
 				</h1>
-				<a href="/resume" class="p-2 m-4 ml-14 -mt-1  bg-winterblues-400 resume self-end">See my resume</a>
+				<a href="/resume" class="p-1 my-4 ml-14 -mt-1  bg-winterblues-700 resume  text-winterblues-300 self-end">See my resume</a>
 			</div>
 			<p
 				class="intro-body mt-3 font-light text-lg md:text-xl xl:text-2xl leading-snug md:leading-relaxed font-montserrat"
@@ -541,33 +541,24 @@
 		font-family: 'Montserrat', sans-serif;
 		text-align: center;
 		// line-height: 0em;
-		background: linear-gradient(
-					90deg,
-					rgba(0, 0, 0, .5) 0%,
-					rgba(0, 0, 0, 0.75) 15%,
-					rgba(0, 0, 0, 0.75) 85%,
-					rgba(0, 0, 0, 0.5) 100%
-				)
-				padding-box,
-			linear-gradient(
-				120deg,
-				var(--color-emerald-500) 10%,
-				var(--color-amber-500) 25%,
-				var(--color-rose-500) 50%,
-				var(--color-fuchsia-500) 75%,
-				var(--color-winterblues-400) 90%
-			);
-
-		// linear-gradient(
+		// background: linear-gradient(
+		// 			90deg,
+		// 			rgba(0, 0, 0, .5) 0%,
+		// 			rgba(0, 0, 0, 0.75) 15%,
+		// 			rgba(0, 0, 0, 0.75) 85%,
+		// 			rgba(0, 0, 0, 0.5) 100%
+		// 		)
+		// 		padding-box,
+		// 	linear-gradient(
 		// 		120deg,
-		// 		rgba(131, 58, 180, 1) 10%,
-		// 		rgba(47, 174, 177, 1) 22%,
-		// 		rgba(253, 29, 29, 1) 50%,
-		// 		rgba(191, 252, 55, 1) 72%,
-		// 		rgba(252, 176, 69, 1) 90%
-		// 	)
-		// 	border-box;
-		// linear-gradient(to right, var(--color-winterblues-600), var(--color-deepreds-900)) border-box;
+		// 		var(--color-emerald-500) 10%,
+		// 		var(--color-amber-500) 25%,
+		// 		var(--color-rose-500) 50%,
+		// 		var(--color-fuchsia-500) 75%,
+		// 		var(--color-winterblues-400) 90%
+		// 	);
+	
+
 		border-radius: 0.25rem;
 		border: 3px solid transparent;
 		transition: all 0.25s;

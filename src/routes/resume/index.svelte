@@ -15,6 +15,52 @@
 		arrowCircleLeft2: 'eva:arrow-circle-left-fill',
 		home: 'bx:bxs-home-heart'
 	};
+
+	const resume_items = [
+		{
+			name: 'Mikepeiman.dev',
+			description: "Coded from scratch in Sveltekit w TailwindCSS, using GraphCMS cloud (now Hygraph) as CMS.",
+
+			technologies_used: ['Svelte', 'TailwindCSS', 'GitHub', 'GraphCMS/HyGraph'],
+			skills_applied: ['Frontend Design', 'Version control', 'Text parsing', 'API access'],
+            date_begun: "",
+            date_completed: "",
+            date_single: "Jan 2022",
+            inspired_by: [{name: "Crinkle.dev", url: "https://www.crinkle.dev" },]
+		},
+		{
+			name: 'Super-tic-tac-toe',
+			description:
+				'custom-built in Sapper; my most ambitious project thus far in terms of number of LOC (approx. 9,500) and features and UI. Dec 2019 - Jan 2020',
+			technologies_used: ['Svelte', 'TailwindCSS', 'GitHub', 'GraphCMS/HyGraph'],
+			skills_applied: ['Frontend Design', 'Version control', 'Text parsing', 'API access'],
+            date_begun: "",
+            date_completed: "",
+            date_single: "Jan 2022",
+            inspired_by: [{name: "Crinkle.dev", url: "https://www.crinkle.dev" },]
+		},
+		{
+			name: 'Discord clone',
+			description: 'from an Egghead tutorial using React, I adapted it to SvelteKit framework.',
+			technologies_used: ['Svelte', 'TailwindCSS', 'GitHub', 'GraphCMS/HyGraph'],
+			skills_applied: ['Frontend Design', 'Version control', 'Text parsing', 'API access'],
+            date_begun: "",
+            date_completed: "",
+            date_single: "Jan 2022",
+            inspired_by: [{name: "Crinkle.dev", url: "https://www.crinkle.dev" },]
+		},
+		{
+			name: 'Pax Galaxia clone',
+			description:
+				'a Pax Galaxia (older desktop game) clone, early stages WIP. Using SvelteKit, HTML5 Canvas',
+			technologies_used: ['Svelte', 'TailwindCSS', 'GitHub', 'GraphCMS/HyGraph'],
+			skills_applied: ['Frontend Design', 'Version control', 'Text parsing', 'API access'],
+            date_begun: "",
+            date_completed: "",
+            date_single: "Jan 2022",
+            inspired_by: [{name: "Crinkle.dev", url: "https://www.crinkle.dev" },]
+		}
+	];
 </script>
 
 <div class="flex flex-col w-full items-center">
@@ -56,64 +102,44 @@
 	<h3 class="text-xl m-2 font-montserrat border-b-2 border-winterblues-700">
 		Items worth including:
 	</h3>
-	<ul class="m-4  px-6 py-2">
-		<li>
-			<h3>Mikepeiman.dev</h3>
-			<div class="content-item">
-				custom-built in Sveltekit w TailwindCSS, using GraphCMS cloud (now Hygraph) as CMS. Jan 2022
-			</div>
-		</li>
-		<li>
-			<h3>Super-tic-tac-toe</h3>
-			<div class="content-item">
-				custom-built in Sapper; my most ambitious project thus far in terms of number of LOC
-				(approx. 9,500) and features and UI. Dec 2019 - Jan 2020
-			</div>
-		</li>
-		<li>
-			<h3>Discord clone</h3>
-			<div class="content-item">
-				from an Egghead tutorial using React, I adapted it to SvelteKit framework.
-			</div>
-		</li>
-		<li>
-			<h3>Stars</h3>
-			<div class="content-item">
-				a Pax Galaxia (older desktop game) clone, early stages WIP. Using SvelteKit, HTML5 Canvas
-			</div>
-		</li>
+
+	<ul class="resume-items-list px-6 py-2 w-auto">
+		{#each resume_items as item}
+			<h3>{item.name}</h3>
+			<li>
+				<div class="content-item">{item.description}</div>
+				<div class="content-item">{item.technologies_used}</div>
+				<div class="content-item">{item.skills_applied}</div>
+			</li>
+		{/each}
 	</ul>
 </div>
 
 <style lang="scss">
-	li {
-		position: relative;
-		// list-style-type: disc;
-		margin: 0;
-		font-family: 'Montserrat', sans-serif;
-		width: auto;
-		border-bottom: 1px solid var(--color-winterblues-600);
-
+	.resume-items-list {
+		margin: 0 2rem 0 2rem;
 		& h3 {
 			position: absolute;
-            padding: .25rem 1rem;
+			padding: 0.25rem 1rem;
 			margin: -1px 0 0 0;
-			background: linear-gradient(
-						90deg,
-						rgba(0, 0, 0, 0.5) 0%,
-						rgba(0, 0, 0, 0.75) 15%,
-						rgba(0, 0, 0, 0.75) 85%,
-						rgba(0, 0, 0, 0.5) 100%
-					)
-					padding-box,
-				linear-gradient(
-					120deg,
-					var(--color-emerald-500) 10%,
-					var(--color-amber-500) 25%,
-					var(--color-rose-500) 50%,
-					var(--color-fuchsia-500) 75%,
-					var(--color-winterblues-400) 90%
-				);
+			background: var(--color-winterblues-700);
+
+			// background: linear-gradient(
+			// 			90deg,
+			// 			rgba(0, 0, 0, 0.5) 0%,
+			// 			rgba(0, 0, 0, 0.75) 15%,
+			// 			rgba(0, 0, 0, 0.75) 85%,
+			// 			rgba(0, 0, 0, 0.5) 100%
+			// 		)
+			// 		padding-box,
+			// 	linear-gradient(
+			// 		120deg,
+			// 		var(--color-emerald-500) 10%,
+			// 		var(--color-amber-500) 25%,
+			// 		var(--color-rose-500) 50%,
+			// 		var(--color-fuchsia-500) 75%,
+			// 		var(--color-winterblues-400) 90%
+			// 	);
 			display: flex;
 			font-size: 1.25rem;
 			font-weight: bold;
@@ -121,10 +147,25 @@
 			// margin-bottom: 1rem;
 		}
 	}
+	li {
+		position: relative;
+		// list-style-type: disc;
+		margin: 0;
+		font-family: 'Montserrat', sans-serif;
+		width: auto;
+		border-bottom: 1px solid var(--color-winterblues-600);
+	}
 
 	.content-item {
-		padding: 3rem 0 1.5rem 1rem;
-		// margin-top: 2rem;
+		padding: 0.5rem 1.5rem;
+	}
+
+	.content-item:first-of-type {
+		padding: 3.5rem 0.5rem 0.5rem 1.5rem;
+	}
+
+	.content-item:last-of-type {
+		padding: 0.5rem 0.5rem 2.5rem 1.5rem;
 	}
 
 	/* h3 {
