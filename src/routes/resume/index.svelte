@@ -21,7 +21,7 @@
 			name: 'Mikepeiman.dev',
 			description: "Coded from scratch in Sveltekit w TailwindCSS, using GraphCMS cloud (now Hygraph) as CMS.",
 			technologies_used: ['Sveltekit', 'TailwindCSS', 'GitHub', 'GraphCMS/HyGraph'],
-			skills_applied: ['Frontend Design', 'Version control', 'Text parsing', 'API access'],
+			skills_applied: ['Frontend Design', 'Text parsing', 'API access'],
             date_begun: "",
             date_completed: "",
             date_single: "Jan 2022",
@@ -32,7 +32,7 @@
 			description:
 				'Custom-built in Sapper; my most ambitious project thus far in terms of number of LOC (approx. 9,500) and features and UI. Dec 2019 - Jan 2020',
 			technologies_used: ['Svelte', 'TailwindCSS', 'GitHub', 'GraphCMS/HyGraph'],
-			skills_applied: ['Frontend Design', 'Version control', 'Text parsing', 'API access'],
+			skills_applied: ['Frontend Design', 'Text parsing', 'API access'],
             date_begun: "Dec 2019",
             date_completed: "Feb 2020",
             date_single: "",
@@ -42,7 +42,7 @@
 			name: 'Discord clone',
 			description: 'From an Egghead tutorial using React, I adapted it to SvelteKit framework.',
 			technologies_used: ['Svelte', 'TailwindCSS', 'GitHub', 'GraphCMS/HyGraph'],
-			skills_applied: ['Frontend Design', 'Version control', 'Text parsing', 'API access'],
+			skills_applied: ['Frontend Design', 'Text parsing', 'API access'],
             date_begun: "",
             date_completed: "",
             date_single: "Jan 2022",
@@ -53,7 +53,7 @@
 			description:
 				'A Pax Galaxia (older desktop game) clone, early stages WIP. Using SvelteKit, HTML5 Canvas.',
 			technologies_used: ['Svelte', 'TailwindCSS', 'GitHub', 'GraphCMS/HyGraph'],
-			skills_applied: ['Frontend Design', 'Version control', 'Text parsing', 'API access'],
+			skills_applied: ['Frontend Design', 'Text parsing', 'API access'],
             date_begun: "",
             date_completed: "",
             date_single: "Feb 2022",
@@ -64,7 +64,7 @@
 			description:
 				"A remake of a classic 1990's text-based MUD. Early stages WIP. Using SvelteKit, DOM manipulation",
 			technologies_used: ['Svelte', 'TailwindCSS', ],
-			skills_applied: ['Frontend Design', 'Version control', 'Text parsing', 'API access'],
+			skills_applied: ['Frontend Design', 'Text parsing', 'API access'],
             date_begun: "",
             date_completed: "",
             date_single: "Jan 2022",
@@ -76,7 +76,7 @@
 			description:
 				"An app to sort and filter DOTA heroes by stats, allowing the user to see, for example, total attribute gain per level. Data scraped from a public DOTA2 website.",
 			technologies_used: ['Vue', 'SCSS', 'Cheerio' ],
-			skills_applied: ['Frontend Design', 'Version control', 'Web scraping',],
+			skills_applied: ['Frontend Design', 'Forms & calculations',],
             date_begun: "",
             date_completed: "",
             date_single: "Oct 2018",
@@ -85,11 +85,11 @@
             completion_total: 80
 		},
 		{
-			name: 'Custom Workout Program App: 5-3-1 Strength & Conditioning',
+			name: '5-3-1 Strength & Conditioning',
 			description:
-				"",
-			technologies_used: ['Vue', 'SCSS', 'Cheerio' ],
-			skills_applied: ['Frontend Design', 'Version control', 'Web scraping',],
+				"An app for the user to easily develop their own custom strength & conditioning workout program automatically based on several basic criteria.",
+			technologies_used: ['Vue', 'SCSS',  ],
+			skills_applied: ['Frontend Design', 'Web scraping',],
             date_begun: "",
             date_completed: "",
             date_single: "Oct 2018",
@@ -97,6 +97,19 @@
             links: [{type: "3rd-party reference", url: "https://barbend.com/5-3-1-program/"},],
             completion_MVP: 100,
             completion_total: 80
+		},
+		{
+			name: 'MathApp',
+			description: "An app made primarily to help with homeschooling my daughter, specifically to generate math problem worksheets of random problems to user-specified criteria in a nice printable format.",
+			technologies_used: ['Sveltekit', 'Supabase', 'User auth'],
+			skills_applied: ['Frontend Design', 'Forms & calculations', "Custom layouts"],
+            date_begun: "Feb 2022",
+            date_completed: "",
+            date_single: "",
+            inspiration: [{verb: "Inspired by", name: "Jim Wendler's 5-3-1 Strength program", canonincal: "", url: ""}],
+            links: [{type: "3rd-party reference", url: "https://barbend.com/5-3-1-program/"},],
+            completion_MVP: 80,
+            completion_total: 50
 		},
 	];
 
