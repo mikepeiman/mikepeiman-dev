@@ -20,13 +20,12 @@
 		{
 			name: 'Mikepeiman.dev',
 			description: "Coded from scratch in Sveltekit w TailwindCSS, using GraphCMS cloud (now Hygraph) as CMS.",
-
-			technologies_used: ['Svelte', 'TailwindCSS', 'GitHub', 'GraphCMS/HyGraph'],
+			technologies_used: ['Sveltekit', 'TailwindCSS', 'GitHub', 'GraphCMS/HyGraph'],
 			skills_applied: ['Frontend Design', 'Version control', 'Text parsing', 'API access'],
             date_begun: "",
             date_completed: "",
             date_single: "Jan 2022",
-            inspired_by: [{name: "Crinkle.dev", url: "https://www.crinkle.dev" },]
+            links: [{name: "Inspired by Crinkles.io", url: "https://www.crinkles.io", notes: "With great thanks to Kevin Pennekamp for the visual inspiration, I followed his example by eye and coded my own site from scratch."},]
 		},
 		{
 			name: 'Super-tic-tac-toe',
@@ -37,7 +36,7 @@
             date_begun: "Dec 2019",
             date_completed: "Feb 2020",
             date_single: "",
-            inspired_by: [{name: "Crinkle.dev", url: "https://www.crinkle.dev" },]
+            links: [{name: "Crinkle.dev", url: "https://www.crinkle.dev" },]
 		},
 		{
 			name: 'Discord clone',
@@ -47,7 +46,7 @@
             date_begun: "",
             date_completed: "",
             date_single: "Jan 2022",
-            inspired_by: [{name: "Crinkle.dev", url: "https://www.crinkle.dev" },]
+            links: [{name: "Crinkle.dev", url: "https://www.crinkle.dev" },]
 		},
 		{
 			name: 'Pax Galaxia redux',
@@ -58,7 +57,7 @@
             date_begun: "",
             date_completed: "",
             date_single: "Feb 2022",
-            inspired_by: [{name: "Crinkle.dev", url: "https://www.crinkle.dev" },]
+            links: [{name: "Crinkle.dev", url: "https://www.crinkle.dev" },]
 		},
 		{
 			name: 'TW2002 redux',
@@ -69,7 +68,7 @@
             date_begun: "",
             date_completed: "",
             date_single: "Jan 2022",
-            inspired_by: [{name: "Crinkle.dev", url: "https://www.crinkle.dev" },]
+            links: [{name: "Crinkle.dev", url: "https://www.crinkle.dev" },]
 		},
 
 		{
@@ -81,10 +80,24 @@
             date_begun: "",
             date_completed: "",
             date_single: "Oct 2018",
-            inspired_by: [{name: "Crinkle.dev", url: "https://www.crinkle.dev" },],
+            links: [{name: "Crinkle.dev", url: "https://www.crinkle.dev" },],
             completion_MVP: 100,
             completion_total: 80
-		}
+		},
+		{
+			name: 'Custom Workout Program App: 5-3-1 Strength & Conditioning',
+			description:
+				"",
+			technologies_used: ['Vue', 'SCSS', 'Cheerio' ],
+			skills_applied: ['Frontend Design', 'Version control', 'Web scraping',],
+            date_begun: "",
+            date_completed: "",
+            date_single: "Oct 2018",
+            inspiration: [{verb: "Inspired by", name: "Jim Wendler's 5-3-1 Strength program", canonincal: "", url: ""}],
+            links: [{type: "3rd-party reference", url: "https://barbend.com/5-3-1-program/"},],
+            completion_MVP: 100,
+            completion_total: 80
+		},
 	];
 
     const tech_skills = [
