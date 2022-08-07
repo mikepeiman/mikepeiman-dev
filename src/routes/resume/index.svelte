@@ -40,7 +40,7 @@
 		},
 		{
 			name: 'Discord clone',
-			description: 'From an Egghead tutorial using React, I adapted it to SvelteKit framework.',
+			description: 'From an Egghead tutorial using React for a pixel-perfect replication of Discord UI; I adapted it to use the SvelteKit framework.',
 			technologies_used: ['Svelte', 'TailwindCSS', 'GitHub', 'GraphCMS/HyGraph'],
 			skills_applied: ['Frontend Design', 'Text parsing', 'API access'],
             date_begun: "",
@@ -165,10 +165,10 @@
 
 	<ul class="resume-items-list px-6 py-2 w-auto">
 		{#each resume_items as item}
-			<h3>{item.name}</h3>
-			<li>
-				<div class="content-item description font-montserrat text-xl flex items-end ">
-                    <div class="italic border-b-2 border-opacity-100 border-orange-500">Description:</div>
+        <li>
+            <div class="content-item description font-montserrat text-xl flex items-end ">
+                    <h3>{item.name}</h3>
+                    <!-- <div class="italic border-b-2 border-opacity-100 border-orange-500">Description:</div> -->
                     <div class="text-base ml-4">{item.description}</div>
                 </div>
                 <div class="content-item tech-list flex">
@@ -191,7 +191,7 @@
 	.resume-items-list {
 		margin: 0 2rem 0 2rem;
 		& h3 {
-			position: absolute;
+			// position: absolute;
 			padding: 0.25rem 1rem;
 			margin: -1px 0 0 0;
 			background: var(--color-winterblues-700);
@@ -225,17 +225,18 @@
 		margin: 0;
 		font-family: 'Montserrat', sans-serif;
 		width: auto;
-		border-bottom: 1px solid var(--color-winterblues-600);
-	}
-
-	.content-item {
-		padding: 0.5rem 1.5rem;
-        &.description {
-
+		// border-bottom: 1px solid var(--color-winterblues-600);
+        & h3 {
         }
 	}
-
+    
+	.content-item {
+        padding: 0.5rem 1.5rem;
+        
+	}
+    
 	.content-item:first-of-type {
+        border-bottom: 1px solid var(--color-winterblues-600);
 		padding: 3.5rem 0.5rem 0.5rem 1.5rem;
 	}
 
