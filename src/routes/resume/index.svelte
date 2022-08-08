@@ -114,7 +114,7 @@
 					url: ''
 				}
 			],
-			links: [{ type: '3rd-party reference', url: 'https://barbend.com/5-3-1-program/' }],
+			links: [{ description: '3rd-party reference', url: 'https://barbend.com/5-3-1-program/' }],
 			completion_MVP: 100,
 			completion_total: 80
 		},
@@ -135,7 +135,7 @@
 					url: ''
 				}
 			],
-			links: [{ type: '3rd-party reference', url: 'https://barbend.com/5-3-1-program/' }],
+			links: [{ type: 'primary', description: '3rd-party reference', url: 'https://barbend.com/5-3-1-program/' }],
 			completion_MVP: 80,
 			completion_total: 50
 		},
@@ -152,8 +152,8 @@
 			date_single: '',
 			// inspiration: [{verb: "Inspired by", name: "Jim Wendler's 5-3-1 Strength program", canonincal: "", url: ""}],
 			links: [
-				{ type: 'Canonical reference', url: 'https://screeps.com/' },
-				{ type: 'Profile', url: 'https://screeps.com/a/#!/profile/snowtigr' }
+				{ type: 'primary', description: 'Canonical reference', url: 'https://screeps.com/' },
+				{ description: 'Profile', url: 'https://screeps.com/a/#!/profile/snowtigr' }
 			],
 			completion_MVP: 100,
 			completion_total: 40
@@ -171,7 +171,7 @@
 			date_single: '',
 			// inspiration: [{verb: "Inspired by", name: "Jim Wendler's 5-3-1 Strength program", canonincal: "", url: ""}],
 			links: [
-				{ type: 'Canonical reference', url: 'https://quotes.curriculumfor.life/' }
+				{ type: 'primary', description: 'Canonical reference', url: 'https://quotes.curriculumfor.life/' }
 			],
 			completion_MVP: 90,
 			completion_total: 40
@@ -188,7 +188,7 @@
 	];
 </script>
 
-<div class="flex flex-col w-full items-center">
+<div class="flex flex-col w-full items-center relative z-0">
 	<div class="icon-nav w-[80%] border-b-[1px] border-amber-400/[0.5] mb-8">
 		<!-- <div class="border-b-[1px] border-amber-400/[0.5] h-[1px] w-full p-1"> -->
 		<a
@@ -220,19 +220,24 @@
 		</a>
 	</div>
 
-	<h2 class="text-2xl m-4 font-montserrat">
-		This is my resume - rough draft. Needs a bit of work.
-	</h2>
 
 
 
-	<ul class="resume-items-list px-6 py-2 w-auto">
+
+	<ul class="resume-items-list px-6 py-2 w-auto relative">
+        <!-- <h2 class="text-2xl m-4 font-montserrat absolute top-[50%] -rotate-45 text-[12rem] z-99 text-orange-500 text-opacity-40">
+            <p>W.I.P. / DRAFT</p>
+        </h2> -->
 		{#each resume_items as item}
 			<li class="border-l-8 border-gray-700 border-b-2 my-2 px-4 bg-slate-500 bg-opacity-20 pt-4">
-				<div class="content-item summary font-montserrat text-xl flex items-end group">
+				<div class="content-item summary font-montserrat text-xl flex items-end ">
 					<h3 class="font-bold border-b-[1px] border-winterblues-400">{item.name}</h3>
-                    <Icon icon={icons.link} class="ml-2 self-center text-winterblues-400 group-hover:hidden group-hover:text-winterblues-100"/>
-                    <Icon icon={icons.open1} class="rotate-90 hidden group-hover:flex ml-2 scale-125 self-center text-winterblues-100 hover:cursor-pointer hover:text-winterblues-100"/>
+                    {#each item.links as link}
+                    <a href={link.url} target="_blank" class="group">
+                        <Icon icon={icons.link} class="ml-2 self-center text-winterblues-400 group-hover:hidden group-hover:text-winterblues-100"/>
+                        <Icon icon={icons.open1} class="rotate-90 hidden group-hover:flex ml-2 scale-125 self-center text-winterblues-100 hover:cursor-pointer hover:text-winterblues-100"/>
+                    </a>
+                    {/each}
 					<!-- <div class="italic border-b-2 border-opacity-100 border-orange-500">summary:</div> -->
 				</div>
                 <div class="text-base my-2">{item.summary}</div>
