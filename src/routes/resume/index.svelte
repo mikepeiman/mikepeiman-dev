@@ -19,108 +19,151 @@
 	const resume_items = [
 		{
 			name: 'Mikepeiman.dev',
-			description: "Coded from scratch in Sveltekit w TailwindCSS, using GraphCMS cloud (now Hygraph) as CMS.",
+			summary:
+				'Coded from scratch in Sveltekit w TailwindCSS, using GraphCMS cloud (now Hygraph) as CMS.',
 			technologies_used: ['Sveltekit', 'TailwindCSS', 'GitHub', 'GraphCMS/HyGraph'],
 			skills_applied: ['Frontend Design', 'Text parsing', 'API access'],
-            date_begun: "",
-            date_completed: "",
-            date_single: "Jan 2022",
-            links: [{name: "Inspired by Crinkles.io", url: "https://www.crinkles.io", notes: "With great thanks to Kevin Pennekamp for the visual inspiration, I followed his example by eye and coded my own site from scratch."},]
+			date_begun: '',
+			date_completed: '',
+			date_single: 'Jan 2022',
+			links: [
+				{
+					name: 'Inspired by Crinkles.io',
+					url: 'https://www.crinkles.io',
+					notes:
+						'With great thanks to Kevin Pennekamp for the visual inspiration, I followed his example by eye and coded my own site from scratch.'
+				}
+			]
 		},
 		{
 			name: 'Super-tic-tac-toe',
-			description:
+			summary:
 				'Custom-built in Sapper; my most ambitious project thus far in terms of number of LOC (approx. 9,500) and features and UI. Dec 2019 - Jan 2020',
 			technologies_used: ['Svelte', 'TailwindCSS', 'GitHub', 'GraphCMS/HyGraph'],
 			skills_applied: ['Frontend Design', 'Text parsing', 'API access'],
-            date_begun: "Dec 2019",
-            date_completed: "Feb 2020",
-            date_single: "",
-            links: [{name: "Crinkle.dev", url: "https://www.crinkle.dev" },]
+			date_begun: 'Dec 2019',
+			date_completed: 'Feb 2020',
+			date_single: '',
+			links: [{ name: 'Crinkle.dev', url: 'https://www.crinkle.dev' }]
 		},
 		{
 			name: 'Discord clone',
-			description: 'From an Egghead tutorial using React for a pixel-perfect replication of Discord UI; I adapted it to use the SvelteKit framework.',
+			summary:
+				'From an Egghead tutorial using React for a pixel-perfect replication of Discord UI; I adapted it to use the SvelteKit framework.',
 			technologies_used: ['Svelte', 'TailwindCSS', 'GitHub', 'GraphCMS/HyGraph'],
 			skills_applied: ['Frontend Design', 'Text parsing', 'API access'],
-            date_begun: "",
-            date_completed: "",
-            date_single: "Jan 2022",
-            links: [{name: "Crinkle.dev", url: "https://www.crinkle.dev" },]
+			date_begun: '',
+			date_completed: '',
+			date_single: 'Jan 2022',
+			links: [{ name: 'Crinkle.dev', url: 'https://www.crinkle.dev' }]
 		},
 		{
 			name: 'Pax Galaxia redux',
-			description:
+			summary:
 				'A Pax Galaxia (older desktop game) clone, early stages WIP. Using SvelteKit, HTML5 Canvas.',
 			technologies_used: ['Svelte', 'TailwindCSS', 'GitHub', 'GraphCMS/HyGraph'],
 			skills_applied: ['Frontend Design', 'Text parsing', 'API access'],
-            date_begun: "",
-            date_completed: "",
-            date_single: "Feb 2022",
-            links: [{name: "Crinkle.dev", url: "https://www.crinkle.dev" },]
+			date_begun: '',
+			date_completed: '',
+			date_single: 'Feb 2022',
+			links: [{ name: 'Crinkle.dev', url: 'https://www.crinkle.dev' }]
 		},
 		{
 			name: 'TW2002 redux',
-			description:
+			summary:
 				"A remake of a classic 1990's text-based MUD. Early stages WIP. Using SvelteKit, DOM manipulation",
-			technologies_used: ['Svelte', 'TailwindCSS', ],
+			technologies_used: ['Svelte', 'TailwindCSS'],
 			skills_applied: ['Frontend Design', 'Text parsing', 'API access'],
-            date_begun: "",
-            date_completed: "",
-            date_single: "Jan 2022",
-            links: [{name: "Crinkle.dev", url: "https://www.crinkle.dev" },]
+			date_begun: '',
+			date_completed: '',
+			date_single: 'Jan 2022',
+			links: [{ name: 'Crinkle.dev', url: 'https://www.crinkle.dev' }]
 		},
 
 		{
 			name: 'DOTA2 Hero Stats viewer',
-			description:
-				"An app to sort and filter DOTA heroes by stats, allowing the user to see, for example, total attribute gain per level. Data scraped from a public DOTA2 website.",
-			technologies_used: ['Vue', 'SCSS', 'Cheerio' ],
-			skills_applied: ['Frontend Design', 'Forms & calculations',],
-            date_begun: "",
-            date_completed: "",
-            date_single: "Oct 2018",
-            links: [{name: "Crinkle.dev", url: "https://www.crinkle.dev" },],
-            completion_MVP: 100,
-            completion_total: 80
+			summary:
+				'An app to sort and filter DOTA heroes by stats, allowing the user to see, for example, total attribute gain per level. Data scraped from a public DOTA2 website.',
+			technologies_used: ['Vue', 'SCSS', 'Cheerio'],
+			skills_applied: ['Frontend Design', 'Forms & calculations'],
+			date_begun: '',
+			date_completed: '',
+			date_single: 'Oct 2018',
+			links: [{ name: 'Crinkle.dev', url: 'https://www.crinkle.dev' }],
+			completion_MVP: 100,
+			completion_total: 80
 		},
 		{
 			name: '5-3-1 Strength & Conditioning',
-			description:
-				"An app for the user to easily develop their own custom strength & conditioning workout program automatically based on several basic criteria.",
-			technologies_used: ['Vue', 'SCSS',  ],
-			skills_applied: ['Frontend Design', 'Web scraping',],
-            date_begun: "",
-            date_completed: "",
-            date_single: "Oct 2018",
-            inspiration: [{verb: "Inspired by", name: "Jim Wendler's 5-3-1 Strength program", canonincal: "", url: ""}],
-            links: [{type: "3rd-party reference", url: "https://barbend.com/5-3-1-program/"},],
-            completion_MVP: 100,
-            completion_total: 80
+			summary:
+				'An app for the user to easily develop their own custom strength & conditioning workout program automatically based on several basic criteria.',
+			technologies_used: ['Vue', 'SCSS'],
+			skills_applied: ['Frontend Design', 'Web scraping'],
+			date_begun: '',
+			date_completed: '',
+			date_single: 'Oct 2018',
+			inspiration: [
+				{
+					verb: 'Inspired by',
+					name: "Jim Wendler's 5-3-1 Strength program",
+					canonincal: '',
+					url: ''
+				}
+			],
+			links: [{ type: '3rd-party reference', url: 'https://barbend.com/5-3-1-program/' }],
+			completion_MVP: 100,
+			completion_total: 80
 		},
 		{
 			name: 'MathApp',
-			description: "An app made primarily to help with homeschooling my daughter, specifically to generate math problem worksheets of random problems to user-specified criteria in a nice printable format.",
+			summary:
+				'An app made primarily to help with homeschooling my daughter, specifically to generate math problem worksheets of random problems to user-specified criteria in a nice printable format.',
 			technologies_used: ['Sveltekit', 'Supabase', 'User auth'],
-			skills_applied: ['Frontend Design', 'Forms & calculations', "Custom layouts"],
-            date_begun: "Feb 2022",
-            date_completed: "",
-            date_single: "",
-            inspiration: [{verb: "Inspired by", name: "Jim Wendler's 5-3-1 Strength program", canonincal: "", url: ""}],
-            links: [{type: "3rd-party reference", url: "https://barbend.com/5-3-1-program/"},],
-            completion_MVP: 80,
-            completion_total: 50
+			skills_applied: ['Frontend Design', 'Forms & calculations', 'Custom layouts'],
+			date_begun: 'Feb 2022',
+			date_completed: '',
+			date_single: '',
+			inspiration: [
+				{
+					verb: 'Inspired by',
+					name: "Jim Wendler's 5-3-1 Strength program",
+					canonincal: '',
+					url: ''
+				}
+			],
+			links: [{ type: '3rd-party reference', url: 'https://barbend.com/5-3-1-program/' }],
+			completion_MVP: 80,
+			completion_total: 50
 		},
+		{
+			name: 'Screeps: GCL 4',
+			summary:
+				"I achieve GCL 4 in the vanilla javascript coding game Screeps, using 95% code I wrote myself (rather than reusing others' as is common in that game). ",
+			description:
+				'NOTE: I am not currently active in the game, I only played it actively for several weeks.',
+			technologies_used: ['JavaScript'],
+			skills_applied: ['Algorithms', 'Refactoring', 'Conditional logic'],
+			date_begun: 'June 2021',
+			date_completed: 'July 2021',
+			date_single: '',
+			// inspiration: [{verb: "Inspired by", name: "Jim Wendler's 5-3-1 Strength program", canonincal: "", url: ""}],
+			links: [
+				{ type: 'Canonical reference', url: 'https://screeps.com/' },
+				{ type: 'Profile', url: 'https://screeps.com/a/#!/profile/snowtigr' }
+			],
+			completion_MVP: 100,
+			completion_total: 40
+		}
 	];
 
-    const tech_skills = [
-        {name: "GitHub", level: 7},
-        {name: "DOM manipulation", level: 7},
-        {name: "Text parsing", level: 7},
-        {name: "SVG", level: 7},
-        {name: "CSS", level: 7},
-        {name: "SCSS", level: 7},
-    ]
+	const tech_skills = [
+		{ name: 'GitHub', level: 7 },
+		{ name: 'DOM manipulation', level: 7 },
+		{ name: 'Text parsing', level: 7 },
+		{ name: 'SVG', level: 7 },
+		{ name: 'CSS', level: 7 },
+		{ name: 'SCSS', level: 7 }
+	];
 </script>
 
 <div class="flex flex-col w-full items-center">
@@ -165,23 +208,24 @@
 
 	<ul class="resume-items-list px-6 py-2 w-auto">
 		{#each resume_items as item}
-        <li>
-            <div class="content-item description font-montserrat text-xl flex items-end ">
-                    <h3>{item.name}</h3>
-                    <!-- <div class="italic border-b-2 border-opacity-100 border-orange-500">Description:</div> -->
-                    <div class="text-base ml-4">{item.description}</div>
+			<li class="border-l-8 border-fuchsia-400 border-b-2 my-2 p-4">
+				<div class="content-item summary font-montserrat text-xl flex items-end ">
+					<h3 class="font-bold border-b-[1px] border-winterblues-400">{item.name}</h3>
+					<!-- <div class="italic border-b-2 border-opacity-100 border-orange-500">summary:</div> -->
+				</div>
+                <div class="text-base my-2">{item.summary}</div>
+                <div class="flex flex-col text-sm">
+                    <div class="tech-list flex my-2">
+                        {#each item.technologies_used as tech}
+                        <div class="mr-2 px-2 bg-slate-500 rounded-sm">{tech}</div>
+                        {/each}
+                    </div>
+                    <div class=" skills-list flex">
+                        {#each item.skills_applied as skill}
+                        <div class="px-2 mr-2 bg-cyan-800 rounded-sm">{skill}</div>
+                        {/each}
+                    </div>
                 </div>
-                <div class="content-item tech-list flex">
-                {#each item.technologies_used as tech}
-
-				<div class="mr-2 px-2 bg-slate-500 rounded-sm">{tech}</div>
-                {/each}
-            </div>
-				<div class="content-item skills-list flex">
-                    {#each item.skills_applied as skill}
-                    <div class="px-2 mr-2 bg-cyan-800 rounded-sm">{skill}</div>
-                    {/each}
-</div>
 			</li>
 		{/each}
 	</ul>
@@ -189,74 +233,19 @@
 
 <style lang="scss">
 	.resume-items-list {
-        display: grid;
-        grid-template-columns: 50% 50%;
-        grid-template-rows: 1fr;
-		margin: 0 2rem 0 2rem;
-		& h3 {
-			// position: absolute;
-			padding: 0.25rem 1rem;
-			margin: -1px 0 0 0;
-			background: var(--color-winterblues-700);
-
-			// background: linear-gradient(
-			// 			90deg,
-			// 			rgba(0, 0, 0, 0.5) 0%,
-			// 			rgba(0, 0, 0, 0.75) 15%,
-			// 			rgba(0, 0, 0, 0.75) 85%,
-			// 			rgba(0, 0, 0, 0.5) 100%
-			// 		)
-			// 		padding-box,
-			// 	linear-gradient(
-			// 		120deg,
-			// 		var(--color-emerald-500) 10%,
-			// 		var(--color-amber-500) 25%,
-			// 		var(--color-rose-500) 50%,
-			// 		var(--color-fuchsia-500) 75%,
-			// 		var(--color-winterblues-400) 90%
-			// 	);
-			display: flex;
-			font-size: 1.25rem;
-			font-weight: bold;
-			border: 1px solid var(--color-winterblues-600);
-			// margin-bottom: 1rem;
-		}
+		display: grid;
+		grid-template-columns: 50% 50%;
+        column-gap: 1rem;
+        row-gap: 1rem;
+		grid-template-rows: 1fr;
 	}
 	li {
 		position: relative;
 		min-height: 100%;
-		margin: 0;
+		// margin: 1.5rem 0;
 		font-family: 'Montserrat', sans-serif;
 		width: auto;
 		// border-bottom: 1px solid var(--color-winterblues-600);
-
-	}
-    
-	.content-item {
-        padding: 0.5rem 1.5rem;
-        
-	}
-    
-	.content-item:first-of-type {
-        border-bottom: 1px solid var(--color-winterblues-600);
-		padding: 3.5rem 0.5rem -1px 1.5rem;
-        height: 8rem;
-        display: grid;
-        grid-template-columns: 30% 1fr;
-        & h3 {
-            // width: 30ch;
-            height: 4rem;
-        }
 	}
 
-	.content-item:last-of-type {
-		padding: 0.5rem 0.5rem 2.5rem 1.5rem;
-	}
-
-	/* h3 {
-    font-size: 1.25rem;
-    font-weight: bold;
-    border-bottom: 2px solid var(--color-winterblues-600);
-    margin-bottom: 1rem;
-} */
 </style>
