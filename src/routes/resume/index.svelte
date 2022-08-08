@@ -153,7 +153,26 @@
 			],
 			completion_MVP: 100,
 			completion_total: 40
-		}
+		},
+		{
+			name: 'Quotes App',
+			summary:
+				"This is a simple app presenting a curated list of quotes, which allows the user to filter results - the purpose and main achievement here was extensive text parsing from a file to take my personal quotes collection and render each quote as a separate item with metadata properly presented.",
+			description:
+        "This is a simple app with basic functionality for the user to filter results - the purpose and main achievement here was extensive text parsing from a file to take my personal quotes collection and render each quote as a separate item with metadata properly presented.",
+			technologies_used: ['JavaScript'],
+			skills_applied: ['Text parsing', 'File reading', 'Icon menus'],
+			date_begun: 'October 2021',
+			date_completed: '',
+			date_single: '',
+			// inspiration: [{verb: "Inspired by", name: "Jim Wendler's 5-3-1 Strength program", canonincal: "", url: ""}],
+			links: [
+				{ type: 'Canonical reference', url: 'https://screeps.com/' },
+				{ type: 'Profile', url: 'https://screeps.com/a/#!/profile/snowtigr' }
+			],
+			completion_MVP: 90,
+			completion_total: 40
+		},
 	];
 
 	const tech_skills = [
