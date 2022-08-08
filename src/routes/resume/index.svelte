@@ -189,6 +189,9 @@
 
 <style lang="scss">
 	.resume-items-list {
+        display: grid;
+        grid-template-columns: 50% 50%;
+        grid-template-rows: 1fr;
 		margin: 0 2rem 0 2rem;
 		& h3 {
 			// position: absolute;
@@ -221,7 +224,7 @@
 	}
 	li {
 		position: relative;
-		// list-style-type: disc;
+		min-height: 100%;
 		margin: 0;
 		font-family: 'Montserrat', sans-serif;
 		width: auto;
@@ -238,6 +241,11 @@
 	.content-item:first-of-type {
         border-bottom: 1px solid var(--color-winterblues-600);
 		padding: 3.5rem 0.5rem 0.5rem 1.5rem;
+        height: 8rem;
+        & h3 {
+            width: 30ch;
+            height: 5rem;
+        }
 	}
 
 	.content-item:last-of-type {
