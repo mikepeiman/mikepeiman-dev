@@ -229,8 +229,7 @@
 		font-family: 'Montserrat', sans-serif;
 		width: auto;
 		// border-bottom: 1px solid var(--color-winterblues-600);
-        & h3 {
-        }
+
 	}
     
 	.content-item {
@@ -240,11 +239,13 @@
     
 	.content-item:first-of-type {
         border-bottom: 1px solid var(--color-winterblues-600);
-		padding: 3.5rem 0.5rem 0.5rem 1.5rem;
+		padding: 3.5rem 0.5rem -1px 1.5rem;
         height: 8rem;
+        display: grid;
+        grid-template-columns: 30% 1fr;
         & h3 {
-            width: 30ch;
-            height: 5rem;
+            // width: 30ch;
+            height: 4rem;
         }
 	}
 
