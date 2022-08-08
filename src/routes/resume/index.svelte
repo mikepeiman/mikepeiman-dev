@@ -13,7 +13,10 @@
 		arrowCircle1: 'bi:arrow-down-circle-fill',
 		arrowCircle2: 'eva:arrow-circle-down-fill',
 		arrowCircleLeft2: 'eva:arrow-circle-left-fill',
-		home: 'bx:bxs-home-heart'
+		home: 'bx:bxs-home-heart',
+        link: 'akar-icons:link-chain',
+        open1: 'fluent:open-folder-16-filled',
+        open2: 'majesticons:open',
 	};
 
 	const resume_items = [
@@ -39,8 +42,9 @@
 			name: 'Super-tic-tac-toe',
 			summary:
 				'Custom-built in Sapper; my most ambitious project thus far in terms of number of LOC (approx. 9,500) and features and UI. Dec 2019 - Jan 2020',
-			technologies_used: ['Svelte', 'TailwindCSS', 'GitHub', 'GraphCMS/HyGraph'],
-			skills_applied: ['Frontend Design', 'Text parsing', 'API access'],
+			technologies_used: ['Svelte', 'Sapper', 'GraphCMS/HyGraph'],
+			skills_applied: ['Forms and calculations', 'Text parsing', 'API access'],
+			libraries: ['RolloverJS'],
 			date_begun: 'Dec 2019',
 			date_completed: 'Feb 2020',
 			date_single: '',
@@ -119,7 +123,7 @@
 			summary:
 				'An app made primarily to help with homeschooling my daughter, specifically to generate math problem worksheets of random problems to user-specified criteria in a nice printable format.',
 			technologies_used: ['Sveltekit', 'Supabase', 'User auth'],
-			skills_applied: ['Frontend Design', 'Forms & calculations', 'Custom layouts'],
+			skills_applied: ['Icon menus', 'Forms & calculations', 'Custom layouts'],
 			date_begun: 'Feb 2022',
 			date_completed: '',
 			date_single: '',
@@ -167,8 +171,7 @@
 			date_single: '',
 			// inspiration: [{verb: "Inspired by", name: "Jim Wendler's 5-3-1 Strength program", canonincal: "", url: ""}],
 			links: [
-				{ type: 'Canonical reference', url: 'https://screeps.com/' },
-				{ type: 'Profile', url: 'https://screeps.com/a/#!/profile/snowtigr' }
+				{ type: 'Canonical reference', url: 'https://quotes.curriculumfor.life/' }
 			],
 			completion_MVP: 90,
 			completion_total: 40
@@ -226,8 +229,10 @@
 	<ul class="resume-items-list px-6 py-2 w-auto">
 		{#each resume_items as item}
 			<li class="border-l-8 border-gray-700 border-b-2 my-2 px-4 bg-slate-500 bg-opacity-20 pt-4">
-				<div class="content-item summary font-montserrat text-xl flex items-end ">
+				<div class="content-item summary font-montserrat text-xl flex items-end group">
 					<h3 class="font-bold border-b-[1px] border-winterblues-400">{item.name}</h3>
+                    <Icon icon={icons.link} class="ml-2 self-center text-winterblues-400 group-hover:hidden group-hover:text-winterblues-100"/>
+                    <Icon icon={icons.open1} class="rotate-90 hidden group-hover:flex ml-2 scale-125 self-center text-winterblues-100 hover:cursor-pointer hover:text-winterblues-100"/>
 					<!-- <div class="italic border-b-2 border-opacity-100 border-orange-500">summary:</div> -->
 				</div>
                 <div class="text-base my-2">{item.summary}</div>
