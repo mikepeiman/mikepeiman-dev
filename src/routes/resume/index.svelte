@@ -138,7 +138,7 @@
 		{
 			name: 'Screeps: GCL 4',
 			summary:
-				"I achieve GCL 4 in the vanilla javascript coding game Screeps, using 95% code I wrote myself (rather than reusing others' as is common in that game). ",
+				"I achieved Global Control Level 4 in the vanilla javascript coding game Screeps, using 95% code I wrote myself (rather than reusing others' as is common in that game). ",
 			description:
 				'NOTE: I am not currently active in the game, I only played it actively for several weeks.',
 			technologies_used: ['JavaScript'],
@@ -202,13 +202,11 @@
 		This is my resume - rough draft. Needs a bit of work.
 	</h2>
 
-	<h3 class="text-xl m-2 font-montserrat border-b-2 border-winterblues-700">
-		Items worth including:
-	</h3>
+
 
 	<ul class="resume-items-list px-6 py-2 w-auto">
 		{#each resume_items as item}
-			<li class="border-l-8 border-fuchsia-400 border-b-2 my-2 p-4">
+			<li class="border-l-8 border-gray-700 border-b-2 my-2 px-4 bg-slate-500 bg-opacity-20 pt-4">
 				<div class="content-item summary font-montserrat text-xl flex items-end ">
 					<h3 class="font-bold border-b-[1px] border-winterblues-400">{item.name}</h3>
 					<!-- <div class="italic border-b-2 border-opacity-100 border-orange-500">summary:</div> -->
@@ -217,12 +215,12 @@
                 <div class="flex flex-col text-sm">
                     <div class="tech-list flex my-2">
                         {#each item.technologies_used as tech}
-                        <div class="mr-2 px-2 bg-slate-500 rounded-sm">{tech}</div>
+                        <div class="mr-2 px-2 bg-blue-900 rounded-sm bg-opacity-80" >{tech}</div>
                         {/each}
                     </div>
                     <div class=" skills-list flex">
                         {#each item.skills_applied as skill}
-                        <div class="px-2 mr-2 bg-cyan-800 rounded-sm">{skill}</div>
+                        <div class="px-2 mr-2 bg-limegreen-800 bg-opacity-60 rounded-sm">{skill}</div>
                         {/each}
                     </div>
                 </div>
@@ -234,9 +232,9 @@
 <style lang="scss">
 	.resume-items-list {
 		display: grid;
-		grid-template-columns: 50% 50%;
-        column-gap: 1rem;
-        row-gap: 1rem;
+		grid-template-columns: 1fr 1fr;
+        column-gap: 4vw;
+        row-gap: 2rem;
 		grid-template-rows: 1fr;
 	}
 	li {
