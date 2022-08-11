@@ -59,7 +59,7 @@
 			date_begun: '',
 			date_completed: '',
 			date_single: 'Jan 2022',
-			links: [{ name: 'Crinkle.dev', url: 'https://www.crinkle.dev' }]
+			links: [{ name: 'Discord clone', url: 'https://www.mikepeiman.dev/egghead-discord' }]
 		},
 		{
 			name: 'Pax Galaxia redux',
@@ -130,12 +130,12 @@
 			inspiration: [
 				{
 					verb: 'Inspired by',
-					name: "Jim Wendler's 5-3-1 Strength program",
+					name: "My daughter 😍",
 					canonincal: '',
 					url: ''
 				}
 			],
-			links: [{ type: 'primary', description: '3rd-party reference', url: 'https://barbend.com/5-3-1-program/' }],
+			links: [{ type: 'Deployment', description: 'If social login does not work it is due to limitations of the free tier on Supabase hosting. Send me a message and I can get it active for 7 days.', url: 'https://math.curriculumfor.life/' }],
 			completion_MVP: 80,
 			completion_total: 50
 		},
@@ -166,6 +166,24 @@
         "This is a simple app with basic functionality for the user to filter results - the purpose and main achievement here was extensive text parsing from a file to take my personal quotes collection and render each quote as a separate item with metadata properly presented.",
 			technologies_used: ['JavaScript'],
 			skills_applied: ['Text parsing', 'File reading', 'Icon menus'],
+			date_begun: 'October 2021',
+			date_completed: '',
+			date_single: '',
+			// inspiration: [{verb: "Inspired by", name: "Jim Wendler's 5-3-1 Strength program", canonincal: "", url: ""}],
+			links: [
+				{ type: 'primary', description: 'Canonical reference', url: 'https://quotes.curriculumfor.life/' }
+			],
+			completion_MVP: 90,
+			completion_total: 40
+		},
+		{
+			name: 'Palette Generator',
+			summary:
+				"This app was inspired by several excellent palette generators, and I took the opportunity to learn more SCSS.",
+			description:
+        "",
+			technologies_used: ['JavaScript', 'SCSS', 'Svelte', 'Sapper'],
+			skills_applied: ['Color', 'Image loading'],
 			date_begun: 'October 2021',
 			date_completed: '',
 			date_single: '',
@@ -229,7 +247,7 @@
             <p>W.I.P. / DRAFT</p>
         </h2> -->
 		{#each resume_items as item}
-			<li class="border-l-8 border-gray-700 border-b-2 my-2 px-4 bg-slate-500 bg-opacity-20 pt-4">
+			<li class="border-l-8 border-gray-700 border-b-4 my-2 px-4 bg-slate-500 bg-opacity-20 pt-4">
 				<div class="content-item summary font-montserrat text-xl flex items-end ">
 					<h3 class="font-bold border-b-[1px] border-winterblues-400">{item.name}</h3>
                     {#each item.links as link}
