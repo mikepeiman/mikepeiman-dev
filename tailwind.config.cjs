@@ -16,6 +16,7 @@ module.exports = {
       'display': ['Vollkorn', ...defaultTheme.fontFamily.sans],
       'body': ['"Open Sans"', ...defaultTheme.fontFamily.sans],
       'open': ['"Open Sans"', ...defaultTheme.fontFamily.sans],
+      'butler': ['Butler',  ...defaultTheme.fontFamily.serif],
       'cairo': ['Cairo', '"Open Sans"', ...defaultTheme.fontFamily.sans],
       'merriweather': ['Merriweather', '"Open Sans"', ...defaultTheme.fontFamily.sans],
       'eczar': ['Eczar', '"Open Sans"', ...defaultTheme.fontFamily.sans],
