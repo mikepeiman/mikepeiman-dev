@@ -15,6 +15,7 @@
 		arrowCircle1: 'bi:arrow-down-circle-fill',
 		arrowCircle2: 'eva:arrow-circle-down-fill',
 		arrowCircleLeft2: 'eva:arrow-circle-left-fill',
+		arrowLeft: 'akar-icons:arrow-left',
 		home: 'bx:bxs-home-heart',
 		home2: 'charm:home',
 		print: 'cil:print',
@@ -34,38 +35,64 @@
 		{ name: 'SCSS', level: 7 }
 	];
 
-	function print() {
-		console.log(`print function `)
+
+	function printFunction() {
+		console.log(`print function `);
+		let resume = document.querySelector('.resume-items-list');
+		console.log(`🚀 ~ file: index.svelte ~ line 40 ~ print ~ resume`, resume);
+		window.print();
+
+
 	}
+
+	// create a function to print contents of .resume-items-list
 </script>
 
-<div class="flex flex-col w-full items-center relative z-0">
-	<div class="flex">
-		<h1 class="text-4xl font-display font-regular self-center mx-6">Mike Peiman</h1>
-		<Icon
-			icon={icons.home2}
-			class="top-0 left-0 w-12 h-12 -ml-2 m-2 transition:all duration-200  hover:text-winterblues-500 hover:cursor-pointer"
-		/>
-		<Icon
-			icon={icons.arrowCircleLeft2}
-			class="top-0 left-0 w-12 h-12 -ml-2 m-2 transition:all duration-200  hover:text-winterblues-500 hover:cursor-pointer"
-		/>
-		<a href="" on:click="{() => print()}">
-			<Icon
-				icon={icons.print}
-				class="top-0 left-0 w-12 h-12 -ml-2 m-2 transition:all duration-200  hover:text-winterblues-500 hover:cursor-pointer"
-			/>
-		</a>
+<div class="flex flex-col w-full items-center justify-center relative z-0 print ">
+	<div class="flex flex-col w-full items-center text-center justify-center relative">
 
+		<div class="flex w-full justify-between items-center pl-8 mt-4 print:hidden ">
+			<a href="/" class="flex items-center">
+				<!-- <Icon
+					icon={icons.arrowLeft}
+					class=" w-8 h-8   transition:all duration-200  hover:text-winterblues-500 hover:cursor-pointer"
+				/> -->
+				<Icon
+					icon={icons.home2}
+					class=" w-12 h-12  transition:all duration-200  hover:text-winterblues-500 hover:cursor-pointer"
+					
+				/>
+			</a>
+			<a href="" class=" w-12 h-12 mr-8 m-2 transition:all duration-200  hover:text-winterblues-500 hover:cursor-pointer" on:click={() => printFunction()}>
+				<Icon
+					icon={icons.print}
+					class="ml-4 w-12 h-12  transition:all duration-200  hover:text-winterblues-500 hover:cursor-pointer"
+				/>
+			</a>
+		</div>
+		<div class="flex items-center justify-center relative text-center">
+			<h1 class="text-4xl font-display font-regular self-center mx-6 ">Mike Peiman</h1>
+		</div>
 	</div>
 
 	{#if resume_items.length}
-		<ul class="resume-items-list px-6 py-2 w-auto relative">
+		<ul class="flex flex-col resume-items-list px-6 py-2 w-auto relative pt-20">
 			<!-- <h2 class="text-2xl m-4 font-montserrat absolute top-[50%] -rotate-45 text-[12rem] z-99 text-orange-500 text-opacity-40">
             <p>W.I.P. / DRAFT</p>
         </h2> -->
 			{#each resume_items as item}
-				<li class="border-l-8 border-gray-700 border-b-4 my-2 px-4 bg-slate-500 bg-opacity-20 pt-4">
+			<div class="project-grid grid">
+				<div class="flex flex-col text-sm flex-wrap">
+					<div class="tech-list flex flex-wrap my-2">
+						{#each item.technologies_used as tech}
+							<div class="mr-2 mb-2 px-2 bg-blue-900 rounded-sm bg-opacity-80">{tech}</div>
+						{/each}
+						{#each item.skills_applied as skill}
+						<div class="px-2 mr-2 mb-2 bg-limegreen-800 bg-opacity-60 rounded-sm">{skill}</div>
+					{/each}
+					</div>
+				</div>
+				<li class="min-h-auto py-4 project border-l-8 border-gray-700 border-b-4 my-2 px-4 bg-slate-500 bg-opacity-20 pt-4">
 					<div class="content-item summary font-montserrat text-xl flex items-end ">
 						<h3 class="font-bold border-b-[1px] border-winterblues-400">{item.name}</h3>
 						{#each item.links as link}
@@ -83,31 +110,35 @@
 						<!-- <div class="italic border-b-2 border-opacity-100 border-orange-500">summary:</div> -->
 					</div>
 					<div class="text-base my-2">{item.summary}</div>
-					<div class="flex flex-col text-sm">
-						<div class="tech-list flex my-2">
-							{#each item.technologies_used as tech}
-								<div class="mr-2 px-2 bg-blue-900 rounded-sm bg-opacity-80">{tech}</div>
-							{/each}
-						</div>
-						<div class=" skills-list flex">
-							{#each item.skills_applied as skill}
-								<div class="px-2 mr-2 bg-limegreen-800 bg-opacity-60 rounded-sm">{skill}</div>
-							{/each}
-						</div>
-					</div>
+
 				</li>
+				<div class="flex flex-col justify-center">
+					<div class="flex">{item.LOC ? item.LOC : 'n/a'}</div>
+					<div class="flex">{item.completion_MVP ? item.completion_MVP : 'n/a'}</div>
+					<div class="flex">{item.completion_total ? item.completion_total : 'n/a'}</div>
+				</div>
+			</div>
 			{/each}
 		</ul>
 	{/if}
 </div>
 
 <style lang="scss">
-	.resume-items-list {
-		display: grid;
-		grid-template-columns: 1fr 1fr;
-		column-gap: 4vw;
-		row-gap: 2rem;
-		grid-template-rows: 1fr;
+	// .resume-items-list {
+	// 	display: flex;
+	// 	flex-direction: column;
+	// 	grid-template-columns: 1fr 1fr;
+	// 	column-gap: 4vw;
+	// 	row-gap: 2rem;
+	// 	grid-template-rows: 1fr;
+	// }
+	.project-grid {
+		grid-template-columns: 20% 60% 20%;
+		break-inside: avoid;
+	}
+	.project {
+		// break-inside: avoid;
+		// break-before: always;
 	}
 	li {
 		position: relative;
@@ -116,5 +147,25 @@
 		font-family: 'Montserrat', sans-serif;
 		width: auto;
 		// border-bottom: 1px solid var(--color-winterblues-600);
+	}
+
+	@media print {
+		@page { size: auto;  margin: 0mm; }
+		.project {
+			break-inside: avoid;
+			// break-before: always;
+		}
+		@page :header {
+			display: none;
+		}
+		@page :footer {
+			display: none;
+		}
+		.no-print {
+			display: none !important;
+		}
+		.print {
+			display: inline;
+		}
 	}
 </style>
