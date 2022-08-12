@@ -49,30 +49,39 @@
 </script>
 
 <div class="flex flex-col w-full items-center justify-center relative z-0 print ">
-	<div class="flex flex-col w-full items-center text-center justify-center relative">
+	<div class="flex flex-col w-full items-center text-center justify-center relative ">
 
-		<div class="flex w-full justify-between items-center pl-8 mt-4 print:hidden ">
-			<a href="/" class="flex items-center">
+		<div class="flex w-full justify-between items-center pl-8 bg-warmGray-900 w-full h-24">
+			<a href="/" class="print:hidden flex items-center  ">
 				<!-- <Icon
 					icon={icons.arrowLeft}
 					class=" w-8 h-8   transition:all duration-200  hover:text-winterblues-500 hover:cursor-pointer"
 				/> -->
 				<Icon
 					icon={icons.home2}
-					class=" w-12 h-12  transition:all duration-200  hover:text-winterblues-500 hover:cursor-pointer"
+					class=" w-10 h-10  transition:all duration-200  hover:text-winterblues-500 hover:cursor-pointer"
 					
 				/>
 			</a>
-			<a href="" class=" w-12 h-12 mr-8 m-2 transition:all duration-200  hover:text-winterblues-500 hover:cursor-pointer" on:click={() => printFunction()}>
+			<div class="flex flex-col w-full items-center justify-center relative text-center ">
+				<h1 class="text-4xl font-montserrat font-bold font-regular self-center mx-6 ">Mike Peiman</h1>
+			</div>
+			<a href="" class="print:hidden  w-10 h-10 mr-8 m-2 transition:all duration-200  hover:text-winterblues-500 hover:cursor-pointer" on:click={() => printFunction()}>
 				<Icon
-					icon={icons.print}
-					class="ml-4 w-12 h-12  transition:all duration-200  hover:text-winterblues-500 hover:cursor-pointer"
+				icon={icons.print}
+				class="ml-4 w-10 h-10  transition:all duration-200  hover:text-winterblues-500 hover:cursor-pointer"
 				/>
 			</a>
 		</div>
-		<div class="flex items-center justify-center relative text-center">
-			<h1 class="text-4xl font-display font-regular self-center mx-6 ">Mike Peiman</h1>
+		<div class="flex flex-col w-full items-center justify-center relative text-center ">
+			<h2 class="text-xl text-bold text-white bg-gradient-to-r from-winterblues-700 to-emerald-700  w-full p-6 justify-center items-center align-middle self-baseline font-montserrat font-regular self-center">Developer: Frontend, fullstack, design, UX</h2>
 		</div>
+		<div class="subhead-item flex items-center">
+			<h3>Summary</h3>
+			<!-- <p>My resume is comprised of projects; because the best way to show my skills is my work. As I am just entering the job market, I do not have relevant employment history to include.</p> -->
+			<p>I am just entering the job market, therefore my resume is comprised of my own projects.</p>
+		</div>
+
 	</div>
 
 	{#if resume_items.length}
@@ -132,6 +141,17 @@
 	// 	row-gap: 2rem;
 	// 	grid-template-rows: 1fr;
 	// }
+	.subhead-item {
+		& h3 {
+			font-size: 1.5rem;
+			padding: 1rem 0;
+			border-bottom: 3px solid var(--color-winterblues-600);
+		}
+		& p {
+			padding-left: 1rem;
+			font-style: italic;
+		}
+	}
 	.project-grid {
 		grid-template-columns: 20% 60% 20%;
 		break-inside: avoid;
