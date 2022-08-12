@@ -41,6 +41,7 @@
 
 <div class="flex flex-col w-full items-center relative z-0">
 	<div class="flex">
+		<h1 class="text-4xl font-display font-regular self-center mx-6">Mike Peiman</h1>
 		<Icon
 			icon={icons.home2}
 			class="top-0 left-0 w-12 h-12 -ml-2 m-2 transition:all duration-200  hover:text-winterblues-500 hover:cursor-pointer"
