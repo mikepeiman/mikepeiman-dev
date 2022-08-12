@@ -23,7 +23,12 @@
 		print3: 'fluent:print-20-filled',
 		link: 'akar-icons:link-chain',
 		open1: 'fluent:open-folder-16-filled',
-		open2: 'majesticons:open'
+		open2: 'majesticons:open',
+		location: 'fa6-solid:location-dot',
+		phone: 'fa:phone',
+		email: 'fa:envelope',
+		github: 'fa:github',
+		
 	};
 
 	const tech_skills = [
@@ -73,13 +78,47 @@
 				/>
 			</a>
 		</div>
-		<div class="flex flex-col w-full items-center justify-center relative text-center ">
-			<h2 class="text-xl text-bold text-white bg-gradient-to-r from-winterblues-700 to-emerald-700  w-full p-6 justify-center items-center align-middle self-baseline font-montserrat font-regular self-center">Developer: Frontend, fullstack, design, UX</h2>
-		</div>
-		<div class="subhead-item flex items-center">
-			<h3>Summary</h3>
-			<!-- <p>My resume is comprised of projects; because the best way to show my skills is my work. As I am just entering the job market, I do not have relevant employment history to include.</p> -->
-			<p>I am just entering the job market, therefore my resume is comprised of my own projects.</p>
+		<div class="flex">
+			<div class="flex flex-col items-start justify-around h-30 pr-6 p-2 bg-black">
+				<div class="icon-group flex">
+					<Icon
+					icon={icons.location}
+					class="ml-4 w-4 h-4 mr-2  transition:all duration-200  hover:text-winterblues-500 hover:cursor-pointer"
+					/>
+					<div class="flex text-sm">Kitchener, ON, Canada</div>
+				</div>
+				<div class="icon-group flex">
+					<Icon
+					icon={icons.email}
+					class="ml-4 w-4 h-4 mr-2  transition:all duration-200  hover:text-winterblues-500 hover:cursor-pointer"
+					/>
+					<div class="flex text-sm">hello@mikepeiman.dev</div>
+				</div>
+				<div class="icon-group flex">
+					<Icon
+					icon={icons.phone}
+					class="ml-4 w-4 h-4 mr-2  transition:all duration-200  hover:text-winterblues-500 hover:cursor-pointer"
+					/>
+					<div class="flex text-sm">1-604-698-7104</div>
+				</div>
+				<div class="icon-group flex">
+					<Icon
+					icon={icons.github}
+					class="ml-4 w-4 h-4 mr-2  transition:all duration-200  hover:text-winterblues-500 hover:cursor-pointer"
+					/>
+					<div class="flex text-sm">https://github.com/mikepeiman</div>
+				</div>
+			</div>
+			<div class="flex flex-col">
+				<div class="flex flex-col w-full items-center justify-center relative text-center ">
+					<h2 class="text-xl text-bold text-white bg-gradient-to-r from-winterblues-700 to-emerald-700  w-full p-6 justify-center items-center align-middle self-baseline font-montserrat font-regular self-center">Developer: Frontend, fullstack, design, UX</h2>
+				</div>
+				<div class="subhead-item flex items-center pl-6">
+					<h3>Summary</h3>
+					<!-- <p>My resume is comprised of projects; because the best way to show my skills is my work. As I am just entering the job market, I do not have relevant employment history to include.</p> -->
+					<p>I am just entering the job market, therefore my resume is comprised of my own projects.</p>
+				</div>
+			</div>
 		</div>
 
 	</div>
@@ -121,11 +160,11 @@
 					<div class="text-base my-2">{item.summary}</div>
 
 				</li>
-				<div class="flex flex-col justify-center">
+				<!-- <div class="flex flex-col justify-center">
 					<div class="flex">{item.LOC ? item.LOC : 'n/a'}</div>
 					<div class="flex">{item.completion_MVP ? item.completion_MVP : 'n/a'}</div>
 					<div class="flex">{item.completion_total ? item.completion_total : 'n/a'}</div>
-				</div>
+				</div> -->
 			</div>
 			{/each}
 		</ul>
@@ -134,7 +173,7 @@
 
 <style lang="scss">
 	// .resume-items-list {
-	// 	display: flex;
+	// 	display: grid;
 	// 	flex-direction: column;
 	// 	grid-template-columns: 1fr 1fr;
 	// 	column-gap: 4vw;
@@ -153,7 +192,7 @@
 		}
 	}
 	.project-grid {
-		grid-template-columns: 20% 60% 20%;
+		grid-template-columns: 20% 80%;
 		break-inside: avoid;
 	}
 	.project {
