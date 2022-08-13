@@ -2,7 +2,7 @@ const resume_items = [
     {
         name: 'Mikepeiman.dev',
         summary:
-            'Coded from scratch in Sveltekit w TailwindCSS, using GraphCMS cloud (now Hygraph) as CMS.',
+            'Coded from scratch in Sveltekit with TailwindCSS, using GraphCMS cloud (now Hygraph) as CMS.',
         technologies_used: ['Sveltekit', 'TailwindCSS', 'GitHub', 'GraphCMS/HyGraph'],
         skills_applied: ['Frontend Design', 'Text parsing', 'API access'],
         date_begun: '',

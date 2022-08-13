@@ -2,7 +2,6 @@
 	import Icon from '@iconify/svelte';
 	import resume_items from './resume.js';
 	console.log(`🚀 ~ file: index.svelte ~ line 4 ~ resume_items`, resume_items);
-	import { Lilangeni } from 'faker/lib/locales/en/finance/currency';
 	const icons = {
 		fire1: 'wi:fire',
 		fire2: 'vaadin:fire',
@@ -68,8 +67,8 @@
 					
 				/>
 			</a>
-			<div class="flex flex-col w-full items-center justify-center relative text-center ">
-				<h1 class="text-4xl font-montserrat font-bold font-regular self-center mx-6 ">Mike Peiman</h1>
+			<div class="flex  w-full items-center justify-center relative text-center ">
+				<h1 class="text-4xl font-montserrat font-bold font-regular self-center mx-6">Mike Peiman</h1>
 			</div>
 			<a href="" class="print:hidden  w-10 h-10 mr-8 m-2 transition:all duration-200  hover:text-winterblues-500 hover:cursor-pointer" on:click={() => printFunction()}>
 				<Icon
@@ -79,7 +78,7 @@
 			</a>
 		</div>
 		<div class="flex">
-			<div class="flex flex-col items-start justify-around h-30 pr-6 p-2 bg-black">
+			<div class="flex flex-col items-start justify-around h-30 pr-6 p-2 bg-winterblues-700 mr-2">
 				<div class="icon-group flex">
 					<Icon
 					icon={icons.location}
@@ -157,7 +156,7 @@
 						{/each}
 						<!-- <div class="italic border-b-2 border-opacity-100 border-orange-500">summary:</div> -->
 					</div>
-					<div class="text-base my-2">{item.summary}</div>
+					<div class="text-base my-2">{@html item.summary}</div>
 
 				</li>
 				<!-- <div class="flex flex-col justify-center">
