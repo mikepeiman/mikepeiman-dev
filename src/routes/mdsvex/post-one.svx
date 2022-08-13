@@ -1,0 +1,6 @@
+---
+layout: mds
+title: "This is the first post"
+---
+
+This is the first post from .svx markdown
