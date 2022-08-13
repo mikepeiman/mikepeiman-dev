@@ -49,11 +49,11 @@
 </script>
 
 <div
-	class="flex flex-col w-full items-center justify-center relative z-0 print bg-warmGray-200 text-gray-900"
+	class="flex flex-col w-full items-center justify-center relative z-0 print bg-warmGray-200 text-gray-900 font-poppins"
 >
 	<div class="flex flex-col w-full items-center text-center justify-center relative ">
 		<div
-			class="flex w-full justify-between items-center pl-8 bg-warmGray-200 w-full h-24 text-warmGray-400 "
+			class="flex w-full justify-between items-center pl-4 bg-warmGray-200 w-full h-24 text-warmGray-400 "
 		>
 			<a href="/" class="print:hidden flex items-center  ">
 				<!-- <Icon
@@ -66,7 +66,7 @@
 				/>
 			</a>
 			<div class="flex w-full items-center justify-center relative text-center ">
-				<h1 class="text-4xl font-cairo font-bold font-regular self-center mx-6 text-warmGray-900">
+				<h1 class="text-4xl font-montserrat  font-bold font-regular self-center mx-6 text-warmGray-900">
 					Michael Peiman
 				</h1>
 			</div>
@@ -81,62 +81,74 @@
 				/>
 			</a>
 		</div>
-		<div class="flex">
+		<div class="grid grid-cols-7 w-full">
 			<div
-				class="flex flex-col items-start font-cairo justify-around h-30 pr-6 p-2 bg-gray-900  mr-2 text-warmGray-200 "
+				class="col-span-2 flex flex-col items-start text-xs justify-around h-30 pr-6 p-2 bg-gray-900  mr-2 text-warmGray-200 "
 			>
 				<div class="icon-group flex mb-2">
 					<Icon
 						icon={icons.location}
 						class="ml-4 w-4 h-4 mr-2  transition:all duration-200  hover:text-winterblues-500 hover:cursor-pointer"
 					/>
-					<div class="flex text-sm">Kitchener, ON, Canada</div>
+					<div class="flex ">Kitchener, ON, Canada</div>
 				</div>
 				<div class="icon-group flex mb-2">
 					<Icon
 						icon={icons.email}
 						class="ml-4 w-4 h-4 mr-2  transition:all duration-200  hover:text-winterblues-500 hover:cursor-pointer"
 					/>
-					<div class="flex text-sm">hello@mikepeiman.dev</div>
+					<div class="flex ">hello@mikepeiman.dev</div>
 				</div>
 				<div class="icon-group flex mb-2">
 					<Icon
 						icon={icons.phone}
 						class="ml-4 w-4 h-4 mr-2  transition:all duration-200  hover:text-winterblues-500 hover:cursor-pointer"
 					/>
-					<div class="flex text-sm">1-604-698-7104</div>
+					<div class="flex ">1-604-698-7104</div>
 				</div>
 				<div class="icon-group flex mb-2s">
 					<Icon
 						icon={icons.github}
 						class="ml-4 w-4 h-4 mr-2  transition:all duration-200  hover:text-winterblues-500 hover:cursor-pointer"
 					/>
-					<div class="flex text-sm">https://github.com/mikepeiman</div>
+					<div class="flex ">https://github.com/mikepeiman</div>
 				</div>
 			</div>
-			<div class="flex flex-col">
+			<div class="col-span-5 flex flex-col">
 				<div class="flex flex-col w-full items-center justify-center relative text-left ">
 					<h2
-						class="text-xl text-bold text-warmGray-200 bg-gradient-to-r from-winterblues-700 to-fuchsia-800 to-yellow-600  w-full px-6 py-3 justify-center items-center align-middle self-baseline font-poppins font-regular "
+						class="text-xl text-bold text-warmGray-200 bg-gradient-to-r from-winterblues-700 to-fuchsia-800   w-full px-6 py-3 justify-center items-center align-middle self-baseline font-regular font-montserrat"
 					>
 						Frontend/Fullstack Developer
 					</h2>
 				</div>
-				<div class="text-gray-750 flex text-left pl-6 pt-4">
+				<div class="text-gray-750 flex text-left pl-6 pt-4 ">
 					<!-- <p>My resume is comprised of projects; because the best way to show my skills is my work. As I am just entering the job market, I do not have relevant employment history to include.</p> -->
 					<p>
-						Presenting several projects which demonstrate my proficiency in JavaScript, HTML,
-						(S)CSS, Svelte/Kit, APIs; and with web design & development in general.
+						JavaScript, HTML, (S)CSS, Svelte/Kit, APIs.<br>Strong sense for CX, UX & UI.<br>
+						
 					</p>
 				</div>
 			</div>
 		</div>
 	</div>
 
-	<div class="subhead-item flex items-center justify-start self-start pl-10 pt-10">
-		<h3>Summary</h3>
-		<p>I am just entering the job market seriously after many years working on my own projects and doing small freelance jobs, therefore I am sharing the variety of projects I have worked on to show the wide breadth and progression of my skills.</p>
+	<div class="w-full">
+		<!-- <div class="col-span-2"></div> -->
+		<div class="grid grid-cols-7 h-24 w-full subhead-item flex items-center justify-start self-start pt-10">
+			<div class="flex items-center justify-center col-span-2 ml-4 h-full border-b-4 border-winterblues-700  ">
+			<h3 class=" text-gray-800  text-2xl">Summary</h3>
+			</div>
+			<p class="col-span-5 pl-6">I am just entering the job market seriously after many years working on my own projects and doing small freelance jobs, therefore I am sharing the variety of projects I have worked on to show the wide breadth and progression of my skills.</p>
+		</div>
 	</div>
+	<div class="grid grid-cols-7 w-full pt-10">
+		<div class="col-span-2 bg-gray-800 text-warmGray-200 w-full h-auto ml-4">
+
+		</div>
+		<div class="col-span-5  mr-4 ">
+
+
 	{#if resume_items.length}
 		<ul class="flex flex-col resume-items-list px-6 py-2 w-auto relative pt-10">
 			<!-- <h2 class="text-2xl m-4 font-montserrat absolute top-[50%] -rotate-45 text-[12rem] z-99 text-orange-500 text-opacity-40">
@@ -192,6 +204,8 @@
 		</ul>
 	{/if}
 </div>
+</div>
+</div>
 
 <style lang="scss">
 	// .resume-items-list {
@@ -202,25 +216,30 @@
 	// 	row-gap: 2rem;
 	// 	grid-template-rows: 1fr;
 	// }
-	.subhead-item {
-		color: var(--color-gray-800);
-		& h3 {
-			font-size: 1.5rem;
-			height: 100%;
-			padding:  0 1rem;
-			justify-self: center;
-			align-self: center;
-			text-align: center;
+	// .subhead-item {
+	// 	color: var(--color-gray-800);
+	// 	display: grid;
+	// 	grid-template-columns: repeat(7, 1fr);
+
+	// 	& h3 {
+	// 		font-size: 1.5rem;
+	// 		grid-column: span 2;
+	// 		height: 100%;
+	// 		padding:  0 1rem;
+	// 		justify-self: center;
+	// 		align-self: center;
+	// 		text-align: center;
 			
-			// border-bottom: 3px solid var(--color-winterblues-800);
-			border-left: 3px solid var(--color-winterblues-800);
-			border-right: 3px solid var(--color-winterblues-800);
-		}
-		& p {
-			padding-left: 1rem;
-			// font-style: italic;
-		}
-	}
+	// 		// border-bottom: 3px solid var(--color-winterblues-800);
+	// 		border-left: 3px solid var(--color-winterblues-800);
+	// 		border-right: 3px solid var(--color-winterblues-800);
+	// 	}
+	// 	& p {
+	// 		// padding-left: 1rem;
+	// 		grid-column: span 5;
+	// 		// font-style: italic;
+	// 	}
+	// }
 	.project-grid {
 		grid-template-columns: 20% 80%;
 		break-inside: avoid;
