@@ -66,7 +66,9 @@
 				/>
 			</a>
 			<div class="flex w-full items-center justify-center relative text-center ">
-				<h1 class="text-4xl font-montserrat  font-bold font-regular self-center mx-6 text-warmGray-900">
+				<h1
+					class="text-4xl font-montserrat  font-bold font-regular self-center mx-6 text-warmGray-900"
+				>
 					Michael Peiman
 				</h1>
 			</div>
@@ -125,8 +127,7 @@
 				<div class="text-gray-750 flex text-left pl-6 pt-4 ">
 					<!-- <p>My resume is comprised of projects; because the best way to show my skills is my work. As I am just entering the job market, I do not have relevant employment history to include.</p> -->
 					<p>
-						JavaScript, HTML, (S)CSS, Svelte/Kit, APIs.<br>Strong sense for CX, UX & UI.<br>
-						
+						JavaScript, HTML, (S)CSS, Svelte/Kit, APIs.<br />Strong sense for CX, UX & UI.<br />
 					</p>
 				</div>
 			</div>
@@ -135,29 +136,33 @@
 
 	<div class="w-full">
 		<!-- <div class="col-span-2"></div> -->
-		<div class="grid grid-cols-7 h-24 w-full subhead-item flex items-center justify-start self-start pt-10">
-			<div class="flex items-center justify-center col-span-2 ml-4 h-full border-b-4 border-winterblues-700  ">
-			<h3 class=" text-gray-800  text-2xl">Summary</h3>
+		<div
+			class="grid grid-cols-7 h-24 w-full subhead-item flex items-center justify-start self-start pt-10"
+		>
+			<div
+				class="flex items-center justify-center col-span-2 h-full border-b-4 border-winterblues-700  "
+			>
+				<h3 class=" text-gray-800  text-2xl">Summary</h3>
 			</div>
-			<p class="col-span-5 pl-6">I am just entering the job market seriously after many years working on my own projects and doing small freelance jobs, therefore I am sharing the variety of projects I have worked on to show the wide breadth and progression of my skills.</p>
+			<p class="col-span-5 pl-6">
+				I am just entering the job market seriously after many years working on my own projects and
+				doing small freelance jobs, therefore I am sharing the variety of projects I have worked on
+				to show the wide breadth and progression of my skills.
+			</p>
 		</div>
 	</div>
 	<div class="grid grid-cols-7 w-full pt-10">
-		<div class="col-span-2 bg-gray-800 text-warmGray-200 w-full h-auto ml-4">
-
-		</div>
+		<div class="col-span-2 bg-gray-800 text-warmGray-200 w-full h-auto " />
 		<div class="col-span-5  mr-4 ">
-
-
-	{#if resume_items.length}
-		<ul class="flex flex-col resume-items-list px-6 py-2 w-auto relative pt-10">
-			<!-- <h2 class="text-2xl m-4 font-montserrat absolute top-[50%] -rotate-45 text-[12rem] z-99 text-orange-500 text-opacity-40">
+			{#if resume_items.length}
+				<ul class="flex flex-col resume-items-list px-6 py-2 w-auto relative pt-10">
+					<!-- <h2 class="text-2xl m-4 font-montserrat absolute top-[50%] -rotate-45 text-[12rem] z-99 text-orange-500 text-opacity-40">
             <p>W.I.P. / DRAFT</p>
         </h2> -->
-			{#each resume_items as project}
-				<div class=" flex flex-col ">
-					<div class="flex flex-col text-sm flex-wrap">
-						<!-- <div class="tech-list flex flex-wrap my-2 text-warmGray-200">
+					{#each resume_items as project}
+						<div class=" flex flex-col ">
+							<div class="flex flex-col text-sm flex-wrap">
+								<!-- <div class="tech-list flex flex-wrap my-2 text-warmGray-200">
 							{#each project.technologies_used as tech}
 								<div class="mr-2 mb-2 px-2 bg-blue-900 rounded-sm bg-opacity-80">{tech}</div>
 							{/each}
@@ -165,46 +170,47 @@
 								<div class="px-2 mr-2 mb-2 bg-limegreen-800 bg-opacity-60 rounded-sm">{skill}</div>
 							{/each}
 						</div> -->
-					</div>
-					<li class="min-h-auto project  border-gray-700  my-2 px-4 pt-4">
-						<div class="project font-montserrat text-xl flex items-end ">
-							<div class="project-heading">
-								<div class="flex">
-									<h3 class="font-bold border-b-[1px] border-winterblues-400 w-auto">{project.name}</h3>
-									<div class="text-cyan-700 text-base">{project.description.stub}</div>
+							</div>
+							<li class="min-h-auto project  border-gray-700  my-2 px-4 pt-4">
+								<div class="project font-montserrat text-xl flex items-end ">
+									<div class="project-heading grid grid-cols-9 w-full">
+										<div class="flex items-center col-span-7">
+											<h3 class="font-bold border-b-[1px] border-winterblues-400 w-auto">
+												{project.name}
+											</h3>
+											<div class="ml-6 text-cyan-700 text-base">{project.description.stub}</div>
+										</div>
+
+										{#if project.additional_links.length}
+											{#each project.additional_links as link}
+												<a href={link.url} target="_blank" class="group col-span-2 p-2 bg-warmGray-500 rounded-lg">
+													<Icon
+														icon={icons.link}
+														class="ml-2 self-center text-winterblues-400 group-hover:hidden group-hover:text-winterblues-700"
+													/>
+													<Icon
+														icon={icons.open1}
+														class="rotate-90 hidden group-hover:flex ml-2 scale-125 self-center text-winterblues-100 hover:cursor-pointer hover:text-winterblues-700"
+													/>
+												</a>
+											{/each}
+										{/if}
+									</div>
+									<!-- <div class="italic border-b-2 border-opacity-100 border-orange-500">summary:</div> -->
 								</div>
-						
-							{#if project.additional_links.length}
-							{#each project.additional_links as link}
-								<a href={link.url} target="_blank" class="group">
-									<Icon
-										icon={icons.link}
-										class="ml-2 self-center text-winterblues-400 group-hover:hidden group-hover:text-winterblues-100"
-									/>
-									<Icon
-										icon={icons.open1}
-										class="rotate-90 hidden group-hover:flex ml-2 scale-125 self-center text-winterblues-100 hover:cursor-pointer hover:text-winterblues-100"
-									/>
-								</a>
-							{/each}
-							{/if}
-						</div>
-							<!-- <div class="italic border-b-2 border-opacity-100 border-orange-500">summary:</div> -->
-						</div>
-						<div class="text-base my-2">{project.description.stub} </div>
-						<div class="text-base my-2">{project.description.brief}</div>
-					</li>
-					<!-- <div class="flex flex-col justify-center">
+								<div class="text-base my-2">{project.description.brief}</div>
+							</li>
+							<!-- <div class="flex flex-col justify-center">
 					<div class="flex">{project.LOC ? project.LOC : 'n/a'}</div>
 					<div class="flex">{project.completion_MVP ? project.completion_MVP : 'n/a'}</div>
 					<div class="flex">{project.completion_total ? project.completion_total : 'n/a'}</div>
 				</div> -->
-				</div>
-			{/each}
-		</ul>
-	{/if}
-</div>
-</div>
+						</div>
+					{/each}
+				</ul>
+			{/if}
+		</div>
+	</div>
 </div>
 
 <style lang="scss">
@@ -229,7 +235,7 @@
 	// 		justify-self: center;
 	// 		align-self: center;
 	// 		text-align: center;
-			
+
 	// 		// border-bottom: 3px solid var(--color-winterblues-800);
 	// 		border-left: 3px solid var(--color-winterblues-800);
 	// 		border-right: 3px solid var(--color-winterblues-800);
@@ -244,10 +250,10 @@
 		grid-template-columns: 20% 80%;
 		break-inside: avoid;
 	}
-	.project-heading {
-display: grid;
-grid-template-columns: 1fr 8rem;
-	}
+	// 	.project-heading {
+	// display: grid;
+	// grid-template-columns: 1fr 8rem;
+	// 	}
 
 	li {
 		position: relative;

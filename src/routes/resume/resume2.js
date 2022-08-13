@@ -49,18 +49,18 @@ const resume_items = [
         LOC: 500,
     },
     {
-        name: '',
+        name: 'Discord clone',
         description: {
-          stub:  '',
-          brief: '',
+          stub:  'A pixel-perfect replication of Discord UI.',
+          brief: 'Implemented from an Egghead tutorial using React for  a pixel-perfect replication of Discord UI; I adapted from the tutorial to use SvelteKit instead of React.',
             full:  ''
         },
         technologies_used: [],
         skills_applied: [],
         date_begun: '',
         date_completed: '',
-        date_single: '',
-        deployment_url: '',
+        date_single: 'Jan 2022',
+        deployment_url: 'https://www.mikepeiman.dev/egghead-discord',
         additional_links: [
             {
                 name: '',
@@ -69,7 +69,7 @@ const resume_items = [
             }
         ],
         completion_MVP: 100,
-        completion_total: 40,
+        completion_total: 100,
         LOC: 500,
     },
     {
