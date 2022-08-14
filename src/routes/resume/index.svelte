@@ -25,16 +25,16 @@
 		</div>
 
 		<div class="resume-main">
-			<div class="resume-left bg-warmGray-200 flex flex-col justify-start items-start w-full pr-2">
+			<div class="resume-left bg-warmGray-200 flex flex-col justify-start items-start w-full pr-2 h-fit h-min">
 				<Skills />
-				<div class="-mt-[2px]">
+				<div class="">
 					<Education />
 				</div>
-				<div class="mt-4">
+				<div class="">
 					<AboutMike />
 				</div>
 			</div>
-			<div class="resume-right bg-white">
+			<div class="resume-right bg-white h-fit h-min">
 				<Objectives />
 				<Projects />
 			</div>
@@ -54,6 +54,7 @@
 	.resume {
 		display: grid;
 		max-width: 8.5in;
+		max-height: 11in;
 		grid-template-rows: auto 1fr;
 		grid-template-areas:
 			'header'

@@ -9,7 +9,7 @@
 		{ name: 'SVG', level: 7 },
 		{ name: 'Canvas', level: 7 },
 		{ name: 'GitHub', level: 7 },
-		// { name: 'Text parsing', level: 7 },
+		{ name: 'GraphQL', level: 7 },
 		{ name: 'Dgraph', level: 7 },
 		{ name: 'Supabase', level: 7 },
 		{ name: 'CMSs', level: 7 },

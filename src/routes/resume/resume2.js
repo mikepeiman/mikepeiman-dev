@@ -150,36 +150,36 @@ const resume_items = [
         completion_total: 100,
         LOC: 500,
     },
-    {
-        name: 'Additional Projects',
-        description: {
-            stub: 'Several other projects that I have worked on that I am proud of:',
-            brief: '',
-            full: ''
-        },
-        achievements: [
-            { name: 'Pax clone', description: 'Clone of Pax Galaxia strategy game.', url: 'https://stars.mikepeiman.dev' },
-            { name: 'Screeps', description: 'Achieved GCL 4 in this JS coding game.', url: 'https://screeps.com/a/#!/profile/snowtigr' },
-            { name: '', description: '', url: '' },
-        ],
-        technologies_used: [],
-        skills_applied: [],
-        date_begun: '',
-        date_completed: '',
-        date_single: '',
-        deployment_url: '',
-        short_url: '',
-        additional_links: [
-            {
-                name: '',
-                url: '',
-                description: ''
-            }
-        ],
-        completion_MVP: 100,
-        completion_total: 40,
-        LOC: 500,
-    },
+    // {
+    //     name: 'Additional Projects',
+    //     description: {
+    //         stub: 'Several other projects that I have worked on that I am proud of:',
+    //         brief: '',
+    //         full: ''
+    //     },
+    //     achievements: [
+    //         { name: 'Pax clone', description: 'Clone of Pax Galaxia strategy game.', url: 'https://stars.mikepeiman.dev' },
+    //         { name: 'Screeps', description: 'Achieved GCL 4 in this JS coding game.', url: 'https://screeps.com/a/#!/profile/snowtigr' },
+    //         { name: '', description: '', url: '' },
+    //     ],
+    //     technologies_used: [],
+    //     skills_applied: [],
+    //     date_begun: '',
+    //     date_completed: '',
+    //     date_single: '',
+    //     deployment_url: '',
+    //     short_url: '',
+    //     additional_links: [
+    //         {
+    //             name: '',
+    //             url: '',
+    //             description: ''
+    //         }
+    //     ],
+    //     completion_MVP: 100,
+    //     completion_total: 40,
+    //     LOC: 500,
+    // },
 ]
 
 export default resume_items

@@ -28,7 +28,7 @@
                                 <ProjectLinks {project} />
                             </div>
                             </div>
-							<div class="grid grid-cols-10 w-full">
+							<div class="w-full grid grid-cols-10"> <!-- grid grid-cols-10 to place the skills to the right -->
 								<div class="flex flex-col col-span-8 items-start">
 									<div class="text-xs">
 										{project.description.stub}
