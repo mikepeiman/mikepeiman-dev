@@ -49,7 +49,7 @@
 		<Footer />
 	</div>
 {:else}
-	<div class="layout-main flex flex-col items-start jutify-start h-screen">
+	<div class="layout-main flex flex-col items-center jutify-center h-screen">
 		<slot />
 	</div>
 {/if}

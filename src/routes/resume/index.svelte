@@ -1,6 +1,11 @@
 <script>
 	import Icon from '@iconify/svelte';
+	import ContactInfo from './ContactInfo.svelte';
 	import resume_items from './resume2.js';
+import ResumeHeader from './ResumeHeader.svelte';
+	import Skills from './Skills.svelte';
+	import SubTitle from './SubTitle.svelte';
+	import Summary from './Summary.svelte';
 	console.log(`🚀 ~ file: index.svelte ~ line 4 ~ resume_items`, resume_items);
 	const icons = {
 		fire1: 'wi:fire',
@@ -32,24 +37,6 @@
 		linkedin: 'fa:linkedin'
 	};
 
-	const tech_skills = [
-		{ name: 'GitHub', level: 7 },
-		{ name: 'DOM manipulation', level: 7 },
-		{ name: 'Text parsing', level: 7 },
-		{ name: 'SVG', level: 7 },
-		{ name: 'CSS', level: 7 },
-		{ name: 'SCSS', level: 7 }
-	];
-
-	const contact_info = [
-		{ name: 'Email', value: 'hello@mikepeiman.dev' },
-		{ name: 'Phone', value: '+1 (604) 698 7104' },
-		{ name: 'Location', value: 'Kitchener, ON, Canada' },
-		{ name: 'Website', value: 'mikepeiman.dev' },
-		{ name: 'GitHub', value: 'github.com/mikepeiman' },
-		{ name: 'LinkedIn', value: 'linkedin.com/in/mikepeiman' }
-	];
-
 	function printFunction() {
 		console.log(`print function `);
 		let resume = document.querySelector('.resume-items-list');
@@ -65,118 +52,58 @@
 	// create a function to print contents of .resume-items-list
 </script>
 
-<div class="resume bg-warmGray-200 w-full h-full">
-	<div class="resume-header ">
-		<div
-			class="flex w-full justify-between items-center pl-4 bg-warmGray-200 w-full h-24 text-warmGray-400 "
-		>
-			<a href="/" class="print:hidden flex items-center  ">
-				<!-- <Icon
-			icon={icons.arrowLeft}
-			class=" w-8 h-8   transition:all duration-200  hover:text-winterblues-500 hover:cursor-pointer"
-		/> -->
-				<Icon
-					icon={icons.home2}
-					class=" w-10 h-10  transition:all duration-200  hover:text-winterblues-500 hover:cursor-pointer"
-				/>
-			</a>
-			<div class="flex w-full items-center justify-center relative text-center ">
-				<h1
-					class="text-4xl font-montserrat  font-bold font-regular self-center mx-6 text-warmGray-900"
-				>
-					Michael Peiman
-				</h1>
-			</div>
-			<a
-				href=""
-				class="print:hidden  w-10 h-10 m-2 transition:all duration-200  hover:text-winterblues-500 hover:cursor-pointer"
-				on:click={() => download()}
-			>
-				<Icon
-					icon={icons.download}
-					class="ml-4 w-10 h-10  transition:all duration-200  hover:text-winterblues-500 hover:cursor-pointer"
-				/>
-			</a>
-			<a
-				href=""
-				class="print:hidden  w-10 h-10 mr-8 m-2 transition:all duration-200  hover:text-winterblues-500 hover:cursor-pointer"
-				on:click={() => printFunction()}
-			>
-				<Icon
-					icon={icons.print}
-					class="ml-4 w-10 h-10  transition:all duration-200  hover:text-winterblues-500 hover:cursor-pointer"
-				/>
-			</a>
-		</div>
-		
-		<div class="resume-subheader w-full">
-			<div
-				class=" flex flex-col items-start text-xs justify-around h-30 pr-6 p-2 bg-gray-900  mr-2 text-warmGray-200 "
-			>
+<div class="wrapper bg-warmGray-400">
+	<div class="resume bg-warmGray-200 w-full h-full text-black font-poppins">
+		<div class="resume-header ">
+				<ResumeHeader />
 
-			{#each contact_info as contact}
 
-			<div class="icon-group flex mb-2">
-				
-				<Icon
-					icon={icons[contact.name.toLowerCase()]}
-					class="ml-4 w-4 h-4 mr-2  transition:all duration-200  hover:text-winterblues-500 hover:cursor-pointer"
-				/>
-				<div class="flex ">{contact.value}</div>
-			</div>
-			{/each}
-
-			</div>
-			<div class=" flex flex-col">
-				<div class="flex flex-col w-full items-center justify-center relative text-left ">
-					<h2
-						class="text-xl text-bold text-warmGray-200 bg-gradient-to-r from-winterblues-700 to-fuchsia-800   w-full px-6 py-3 justify-center items-center align-middle self-baseline font-regular font-montserrat"
-					>
-						Frontend/Fullstack Developer
-					</h2>
-				</div>
-				<div class="text-gray-750 flex text-left pl-6 pt-4 ">
-					<!-- <p>My resume is comprised of projects; because the best way to show my skills is my work. As I am just entering the job market, I do not have relevant employment history to include.</p> -->
-					<p>
-						JavaScript, HTML, (S)CSS, Svelte/Kit, APIs.<br />Strong sense for CX, UX & UI.<br />
-					</p>
-				</div>
+			<div class="resume-subheader w-full">
+				<ContactInfo />
+				<SubTitle />
 			</div>
 		</div>
-	</div>
-	
-	<div class="resume-main bg-lime-200" >
-<div class="resume-left bg-fuchsia-400">
 
-</div>
-<div class="resume-right bg-orange-300">
-
-</div>
+		<div class="resume-main">
+			<div class="resume-left bg-warmGray-200">
+				<Skills />
+			</div>
+			<div class="resume-right bg-white">
+				<Summary />
+			</div>
+		</div>
 	</div>
 </div>
 
 <style lang="scss">
+	.wrapper {
+		width: 100%;
+		height: 100%;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
 	.resume {
 		display: grid;
-		// grid-template-columns: 1fr 1fr;
-		grid-gap: 1rem;
+		max-width: 8.5in;
 		grid-template-rows: auto 1fr;
-
 		grid-template-areas:
 			'header'
 			'main';
 	}
 	.resume-header {
 		grid-area: header;
-
 	}
 	.resume-subheader {
-				display: grid;
+		display: grid;
+		grid-gap: 1rem;
 		grid-template-columns: 2fr 5fr;
 	}
 	.resume-main {
 		grid-area: main;
 		display: grid;
+		grid-gap: 1rem;
 		grid-template-columns: 2fr 5fr;
 		grid-template-areas: 'left right';
 	}
@@ -196,46 +123,11 @@
 			'header'
 			'main';
 	}
-	// .resume-items-list {
-	// 	display: grid;
-	// 	flex-direction: column;
-	// 	grid-template-columns: 1fr 1fr;
-	// 	column-gap: 4vw;
-	// 	row-gap: 2rem;
-	// 	grid-template-rows: 1fr;
-	// }
-	// .subhead-item {
-	// 	color: var(--color-gray-800);
-	// 	display: grid;
-	// 	grid-template-columns: repeat(7, 1fr);
 
-	// 	& h3 {
-	// 		font-size: 1.5rem;
-	// 		grid-column: span 2;
-	// 		height: 100%;
-	// 		padding:  0 1rem;
-	// 		justify-self: center;
-	// 		align-self: center;
-	// 		text-align: center;
-
-	// 		// border-bottom: 3px solid var(--color-winterblues-800);
-	// 		border-left: 3px solid var(--color-winterblues-800);
-	// 		border-right: 3px solid var(--color-winterblues-800);
-	// 	}
-	// 	& p {
-	// 		// padding-left: 1rem;
-	// 		grid-column: span 5;
-	// 		// font-style: italic;
-	// 	}
-	// }
 	.project-grid {
 		grid-template-columns: 20% 80%;
 		break-inside: avoid;
 	}
-	// 	.project-heading {
-	// display: grid;
-	// grid-template-columns: 1fr 8rem;
-	// 	}
 
 	li {
 		position: relative;
@@ -249,7 +141,7 @@
 	@media print {
 		@page {
 			size: auto;
-			margin: 2cm;
+			margin: 0;
 		}
 		.project {
 			break-inside: avoid;
