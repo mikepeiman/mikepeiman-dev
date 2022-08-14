@@ -26,7 +26,9 @@
 		location: 'fa6-solid:location-dot',
 		phone: 'fa:phone',
 		email: 'fa:envelope',
-		github: 'fa:github'
+		github: 'fa:github',
+		website: 'clarity:world-line',
+		linkedin: 'fa:linkedin',
 	};
 
 	const tech_skills = [
@@ -36,6 +38,15 @@
 		{ name: 'SVG', level: 7 },
 		{ name: 'CSS', level: 7 },
 		{ name: 'SCSS', level: 7 }
+	];
+
+	const contact_info = [
+		{ name: 'Email', value: 'hello@mikepeiman.dev' },
+		{ name: 'Phone', value: '+1 (604) 698 7104' },
+		{ name: 'Location', value: 'Kitchener, ON, Canada' },
+		{ name: 'Website', value: 'mikepeiman.dev' },
+		{ name: 'GitHub', value: 'github.com/mikepeiman' },
+		{ name: 'LinkedIn', value: 'linkedin.com/in/mikepeiman' },
 	];
 
 	function printFunction() {
@@ -87,34 +98,19 @@
 			<div
 				class="col-span-2 flex flex-col items-start text-xs justify-around h-30 pr-6 p-2 bg-gray-900  mr-2 text-warmGray-200 "
 			>
-				<div class="icon-group flex mb-2">
-					<Icon
-						icon={icons.location}
-						class="ml-4 w-4 h-4 mr-2  transition:all duration-200  hover:text-winterblues-500 hover:cursor-pointer"
-					/>
-					<div class="flex ">Kitchener, ON, Canada</div>
-				</div>
-				<div class="icon-group flex mb-2">
-					<Icon
-						icon={icons.email}
-						class="ml-4 w-4 h-4 mr-2  transition:all duration-200  hover:text-winterblues-500 hover:cursor-pointer"
-					/>
-					<div class="flex ">hello@mikepeiman.dev</div>
-				</div>
-				<div class="icon-group flex mb-2">
-					<Icon
-						icon={icons.phone}
-						class="ml-4 w-4 h-4 mr-2  transition:all duration-200  hover:text-winterblues-500 hover:cursor-pointer"
-					/>
-					<div class="flex ">1-604-698-7104</div>
-				</div>
-				<div class="icon-group flex mb-2s">
-					<Icon
-						icon={icons.github}
-						class="ml-4 w-4 h-4 mr-2  transition:all duration-200  hover:text-winterblues-500 hover:cursor-pointer"
-					/>
-					<div class="flex ">https://github.com/mikepeiman</div>
-				</div>
+
+			{#each contact_info as contact}
+
+			<div class="icon-group flex mb-2">
+				
+				<Icon
+					icon={icons[contact.name.toLowerCase()]}
+					class="ml-4 w-4 h-4 mr-2  transition:all duration-200  hover:text-winterblues-500 hover:cursor-pointer"
+				/>
+				<div class="flex ">{contact.value}</div>
+			</div>
+			{/each}
+
 			</div>
 			<div class="col-span-5 flex flex-col">
 				<div class="flex flex-col w-full items-center justify-center relative text-left ">
