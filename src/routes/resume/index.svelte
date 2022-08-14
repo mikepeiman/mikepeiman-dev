@@ -1,7 +1,9 @@
 <script>
 	import Icon from '@iconify/svelte';
 	import ContactInfo from './ContactInfo.svelte';
+import Education from './Education.svelte';
 import Projects from './Projects.svelte';
+import AboutMike from './AboutMike.svelte';
 	import resume_items from './resume2.js';
 import ResumeHeader from './ResumeHeader.svelte';
 	import Skills from './Skills.svelte';
@@ -64,8 +66,10 @@ import ResumeHeader from './ResumeHeader.svelte';
 		</div>
 
 		<div class="resume-main">
-			<div class="resume-left bg-warmGray-200">
+			<div class="resume-left bg-warmGray-200 flex flex-col justify-start items-start w-full">
 				<Skills />
+				<Education />
+				<AboutMike />
 			</div>
 			<div class="resume-right bg-white">
 				<Summary />
@@ -109,19 +113,9 @@ import ResumeHeader from './ResumeHeader.svelte';
 	}
 	.resume-left {
 		grid-area: left;
-		display: grid;
-		grid-template-rows: auto 1fr;
-		grid-template-areas:
-			'header'
-			'main';
 	}
 	.resume-right {
 		grid-area: right;
-		display: grid;
-		grid-template-rows: auto 1fr;
-		grid-template-areas:
-			'header'
-			'main';
 	}
 
 	.project-grid {

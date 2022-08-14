@@ -1,14 +1,23 @@
 <script>
     	const tech_skills = [
+            { name: 'JS', level: 7 },
+            { name: '(S)CSS', level: 7 },
+            { name: 'HTML', level: 7 },
+            { name: 'Svelte/kit', level: 7 },
+            { name: 'SVG', level: 7 },
 		{ name: 'GitHub', level: 7 },
-		{ name: 'DOM manipulation', level: 7 },
+		{ name: 'Canvas', level: 7 },
 		{ name: 'Text parsing', level: 7 },
-		{ name: 'SVG', level: 7 },
-		{ name: 'CSS', level: 7 },
-		{ name: 'SCSS', level: 7 }
+		{ name: 'VueJS', level: 7 },
+		{ name: 'Dgraph', level: 7 },
+		{ name: 'Supabase', level: 7 },
+		{ name: 'CMSs', level: 7 },
+		{ name: 'Vercel', level: 7 },
+		{ name: 'Netify', level: 7 },
+		{ name: 'cPanel', level: 7 },
 	];
 </script>
-<div class=" flex flex-col items-start text-xs justify-around h-30  m-2">
+<div class=" flex flex-col items-start text-xs justify-around m-2 w-full">
     <div class="flex h-full w-full border-b-2 border-winterblues-700  ">
         <h3 class=" text-gray-800 p-1 pl-2 text-lg">Skills</h3>
     </div>
