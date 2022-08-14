@@ -3,7 +3,7 @@
 	import ProjectAchievements from './ProjectAchievements.svelte';
 	import ProjectLinks from './ProjectLinks.svelte';
 	import ProjectSkills from './ProjectSkills.svelte';
-	import resume_items from './resume2.js';
+	import resume_items from './resume-page-1.js';
 	const icons = {
 		link: 'akar-icons:link-chain',
 		open1: 'fluent:open-folder-16-filled',
@@ -16,7 +16,7 @@
 		<h3 class=" text-gray-800 p-0 mt-4 pl-2 text-lg">Projects</h3>
 	</div>
 	{#if resume_items.length}
-		<ul class="flex flex-col resume-items-list px-6 py-2 w-auto relative break-inside-avoid">
+		<ul class="flex flex-col resume-items-list px-6 py-2 w-auto relative break-inside-avoid break-inside-avoid-column break-inside-avoid-page">
 			{#each resume_items as project}
 				<div class="flex flex-col">
 					<li class="min-h-auto border-gray-700 mb-2 px-0 ">
