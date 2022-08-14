@@ -6,6 +6,11 @@ const resume_items = [
           brief: 'Coded from scratch in Sveltekit with TailwindCSS, using GraphCMS cloud (now Hygraph) as CMS.',
             full:  'Coded from scratch in Sveltekit with TailwindCSS, using GraphCMS cloud (now Hygraph) as CMS.'
         },
+        achievements: [
+            'One',
+            'Two',
+            'Three',
+        ],
         technologies_used: ['Sveltekit', 'TailwindCSS', 'GitHub', 'GraphCMS/HyGraph'],
         skills_applied: ['Frontend Design', 'Text parsing', 'API access'],
         date_begun: '',
@@ -31,6 +36,11 @@ const resume_items = [
           brief: 'Custom-built in Sapper; my most ambitious project thus far in terms of number of LOC (approx. 9,500), features and UI.',
             full:  ''
         },
+        achievements: [
+            'One',
+            'Two',
+            'Three',
+        ],
         technologies_used: ['Svelte', 'Sapper'],
         skills_applied: ['Forms and calculations', 'Text parsing', 'API access'],
         date_begun: 'Dec 2019',
@@ -55,6 +65,11 @@ const resume_items = [
           brief: 'Implemented from an Egghead tutorial using React for  a pixel-perfect replication of Discord UI; I adapted from the tutorial to use SvelteKit instead of React.',
             full:  ''
         },
+        achievements: [
+            'One',
+            'Two',
+            'Three',
+        ],
         technologies_used: [],
         skills_applied: [],
         date_begun: '',
@@ -73,12 +88,17 @@ const resume_items = [
         LOC: 500,
     },
     {
-        name: '',
+        name: 'MathSheets',
         description: {
-          stub:  '',
-          brief: '',
+          stub:  'An app for generating elementary math worksheets to user specifications.',
+          brief: 'I made this app primarily to help with homeschooling my daughter, specifically to generate math problem worksheets of random problems to user-specified criteria in a nice printable format.',
             full:  ''
         },
+        achievements: [
+            'One',
+            'Two',
+            'Three',
+        ],s
         technologies_used: [],
         skills_applied: [],
         date_begun: '',
@@ -103,222 +123,11 @@ const resume_items = [
           brief: '',
             full:  ''
         },
-        technologies_used: [],
-        skills_applied: [],
-        date_begun: '',
-        date_completed: '',
-        date_single: '',
-        deployment_url: '',
-        additional_links: [
-            {
-                name: '',
-                url: '',
-                description:''
-            }
+        achievements: [
+            'One',
+            'Two',
+            'Three',
         ],
-        completion_MVP: 100,
-        completion_total: 40,
-        LOC: 500,
-    },
-    {
-        name: '',
-        description: {
-          stub:  '',
-          brief: '',
-            full:  ''
-        },
-        technologies_used: [],
-        skills_applied: [],
-        date_begun: '',
-        date_completed: '',
-        date_single: '',
-        deployment_url: '',
-        additional_links: [
-            {
-                name: '',
-                url: '',
-                description:''
-            }
-        ],
-        completion_MVP: 100,
-        completion_total: 40,
-        LOC: 500,
-    },
-    {
-        name: '',
-        description: {
-          stub:  '',
-          brief: '',
-            full:  ''
-        },
-        technologies_used: [],
-        skills_applied: [],
-        date_begun: '',
-        date_completed: '',
-        date_single: '',
-        deployment_url: '',
-        additional_links: [
-            {
-                name: '',
-                url: '',
-                description:''
-            }
-        ],
-        completion_MVP: 100,
-        completion_total: 40,
-        LOC: 500,
-    },
-    {
-        name: '',
-        description: {
-          stub:  '',
-          brief: '',
-            full:  ''
-        },
-        technologies_used: [],
-        skills_applied: [],
-        date_begun: '',
-        date_completed: '',
-        date_single: '',
-        deployment_url: '',
-        additional_links: [
-            {
-                name: '',
-                url: '',
-                description:''
-            }
-        ],
-        completion_MVP: 100,
-        completion_total: 40,
-        LOC: 500,
-    },
-    {
-        name: '',
-        description: {
-          stub:  '',
-          brief: '',
-            full:  ''
-        },
-        technologies_used: [],
-        skills_applied: [],
-        date_begun: '',
-        date_completed: '',
-        date_single: '',
-        deployment_url: '',
-        additional_links: [
-            {
-                name: '',
-                url: '',
-                description:''
-            }
-        ],
-        completion_MVP: 100,
-        completion_total: 40,
-        LOC: 500,
-    },
-    {
-        name: '',
-        description: {
-          stub:  '',
-          brief: '',
-            full:  ''
-        },
-        technologies_used: [],
-        skills_applied: [],
-        date_begun: '',
-        date_completed: '',
-        date_single: '',
-        deployment_url: '',
-        additional_links: [
-            {
-                name: '',
-                url: '',
-                description:''
-            }
-        ],
-        completion_MVP: 100,
-        completion_total: 40,
-        LOC: 500,
-    },
-    {
-        name: '',
-        description: {
-          stub:  '',
-          brief: '',
-            full:  ''
-        },
-        technologies_used: [],
-        skills_applied: [],
-        date_begun: '',
-        date_completed: '',
-        date_single: '',
-        deployment_url: '',
-        additional_links: [
-            {
-                name: '',
-                url: '',
-                description:''
-            }
-        ],
-        completion_MVP: 100,
-        completion_total: 40,
-        LOC: 500,
-    },
-    {
-        name: '',
-        description: {
-          stub:  '',
-          brief: '',
-            full:  ''
-        },
-        technologies_used: [],
-        skills_applied: [],
-        date_begun: '',
-        date_completed: '',
-        date_single: '',
-        deployment_url: '',
-        additional_links: [
-            {
-                name: '',
-                url: '',
-                description:''
-            }
-        ],
-        completion_MVP: 100,
-        completion_total: 40,
-        LOC: 500,
-    },
-    {
-        name: '',
-        description: {
-          stub:  '',
-          brief: '',
-            full:  ''
-        },
-        technologies_used: [],
-        skills_applied: [],
-        date_begun: '',
-        date_completed: '',
-        date_single: '',
-        deployment_url: '',
-        additional_links: [
-            {
-                name: '',
-                url: '',
-                description:''
-            }
-        ],
-        completion_MVP: 100,
-        completion_total: 40,
-        LOC: 500,
-    },
-    {
-        name: '',
-        description: {
-          stub:  '',
-          brief: '',
-            full:  ''
-        },
         technologies_used: [],
         skills_applied: [],
         date_begun: '',
