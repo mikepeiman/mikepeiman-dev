@@ -19,6 +19,7 @@
 		home2: 'charm:home',
 		print: 'cil:print',
 		print2: 'gridicons:print',
+		download: 'akar-icons:download',
 		print3: 'fluent:print-20-filled',
 		link: 'akar-icons:link-chain',
 		open1: 'fluent:open-folder-16-filled',
@@ -55,6 +56,12 @@
 		console.log(`🚀 ~ file: index.svelte ~ line 40 ~ print ~ resume`, resume);
 		window.print();
 	}
+	function download() {
+		console.log(`print function `);
+		let resume = document.querySelector('.resume-items-list');
+		console.log(`🚀 ~ file: index.svelte ~ line 40 ~ print ~ resume`, resume);
+
+	}
 
 	// create a function to print contents of .resume-items-list
 </script>
@@ -83,6 +90,16 @@
 					Michael Peiman
 				</h1>
 			</div>
+			<a
+				href=""
+				class="print:hidden  w-10 h-10 m-2 transition:all duration-200  hover:text-winterblues-500 hover:cursor-pointer"
+				on:click={() => download()}
+			>
+				<Icon
+					icon={icons.download}
+					class="ml-4 w-10 h-10  transition:all duration-200  hover:text-winterblues-500 hover:cursor-pointer"
+				/>
+			</a>
 			<a
 				href=""
 				class="print:hidden  w-10 h-10 mr-8 m-2 transition:all duration-200  hover:text-winterblues-500 hover:cursor-pointer"
