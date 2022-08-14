@@ -10,15 +10,18 @@
 
 {#if project.additional_links.length}
 	{#each project.additional_links as link}
-		<a href={link.url} target="_blank" class="group col-span-2">
-			<Icon
-				icon={icons.link}
-				class="ml-2 self-center text-winterblues-400 group-hover:hidden group-hover:text-winterblues-700"
-			/>
-			<Icon
-				icon={icons.open1}
-				class="rotate-90 hidden group-hover:flex ml-2 scale-125 self-center text-winterblues-100 hover:cursor-pointer hover:text-winterblues-700"
-			/>
-		</a>
+		<div class="group text-xs">
+			<a href={link.url} target="_blank" class=" flex  text-winterblues-800  group-hover:text-winterblues-500">
+				<Icon
+					icon={icons.link}
+					class="mx-2 self-center text-winterblues-800 group-hover:hidden group-hover:text-winterblues-500"
+				/>
+				<Icon
+					icon={icons.open1}
+					class="rotate-90 hidden group-hover:flex mx-2 scale-125 self-center text-winterblues-100 hover:cursor-pointer group-hover:text-winterblues-500"
+				/>
+				{link.url}
+			</a>
+		</div>
 	{/each}
 {/if}

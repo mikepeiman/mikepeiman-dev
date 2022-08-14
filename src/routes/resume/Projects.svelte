@@ -20,12 +20,16 @@
 			{#each resume_items as project}
 				<div class="flex flex-col">
 					<li class="min-h-auto border-gray-700 my-2 px-0 ">
-						<div class="font-montserrat text-lg flex items-end">
+						<div class="font-montserrat text-lg flex  items-center justify-between">
+                            <h3 class="">
+                                {project.name}
+                            </h3>
+                            <div class="flex">
+                                <ProjectLinks {project} />
+                            </div>
+                            </div>
 							<div class="project-heading grid grid-cols-9 w-full">
 								<div class="flex flex-col col-span-7 items-start">
-									<h3 class="">
-										{project.name}
-									</h3>
 									<div class="text-xs">
 										{project.description.stub}
 										{project.description.brief}
@@ -35,8 +39,7 @@
 								<div class="col-span-2">
                                     <ProjectSkills {project} />
                                 </div>
-								<ProjectLinks {project} />
-							</div>
+							<!-- </div> -->
 							<!-- <div class="italic border-b-2 border-opacity-100 border-orange-500">summary:</div> -->
 						</div>
 					</li>

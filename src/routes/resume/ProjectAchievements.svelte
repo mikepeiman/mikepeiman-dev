@@ -5,11 +5,11 @@
 
 {#each project.achievements as achievement}
 {#if achievement.name.length}
-	<ul class="flex flex-col items-start">
+	<ul class="flex flex-col items-start pt-1 italic">
 		<li class="text-xs w-auto ">
-			{achievement.name}:
+			{achievement.name}
 			{#if achievement.description}
-			{achievement.description}
+			: {achievement.description}
 			{/if}
 			{#if achievement.url}
 			<a href={achievement.url} target="_blank" class="text-cyan-400 underline">{achievement.url}</a>
