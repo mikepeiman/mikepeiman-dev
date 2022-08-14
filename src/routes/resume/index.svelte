@@ -1,6 +1,7 @@
 <script>
 	import Icon from '@iconify/svelte';
 	import ContactInfo from './ContactInfo.svelte';
+import Projects from './Projects.svelte';
 	import resume_items from './resume2.js';
 import ResumeHeader from './ResumeHeader.svelte';
 	import Skills from './Skills.svelte';
@@ -56,8 +57,6 @@ import ResumeHeader from './ResumeHeader.svelte';
 	<div class="resume bg-warmGray-200 w-full h-full text-black font-poppins">
 		<div class="resume-header ">
 				<ResumeHeader />
-
-
 			<div class="resume-subheader w-full">
 				<ContactInfo />
 				<SubTitle />
@@ -70,6 +69,7 @@ import ResumeHeader from './ResumeHeader.svelte';
 			</div>
 			<div class="resume-right bg-white">
 				<Summary />
+				<Projects />
 			</div>
 		</div>
 	</div>
