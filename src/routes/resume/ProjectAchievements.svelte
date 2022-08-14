@@ -6,7 +6,7 @@
 {#each project.achievements as achievement}
 {#if achievement.name.length}
 	<ul class="flex flex-col items-start pt-1 italic font-light">
-		<li class="text-xs w-auto ">
+		<li class="text-xs w-auto">
 			{achievement.name}
 			{#if achievement.description}
 			: {achievement.description}
@@ -22,6 +22,7 @@
 <style lang="scss">
 	ul li {
 		list-style-type: disc;
+		padding: 0;
 		margin-left: 1rem;
 	}
 </style>

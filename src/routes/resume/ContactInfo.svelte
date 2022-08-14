@@ -20,15 +20,15 @@
 </script>
 
 <div
-class=" flex flex-col items-start text-xs justify-around h-30 pr-6 p-2 bg-gray-700  text-warmGray-200 "
+class=" flex flex-col items-start text-[0.65rem] justify-around h-30 pr-0 py-2 -ml-2  bg-gray-700  text-warmGray-200 w-full"
 >
 {#each contact_info as contact}
-    <div class="icon-group flex mb-2">
+    <div class="icon-group flex mb-2 items-center">
         <Icon
             icon={icons[contact.name.toLowerCase()]}
-            class="ml-4 w-4 h-4 mr-2  transition:all duration-200  hover:text-winterblues-500 hover:cursor-pointer"
+            class="ml-4 w-4 h-4 mx-2 transition:all duration-200  hover:text-winterblues-500 hover:cursor-pointer"
         />
-        <div class="flex ">{contact.value}</div>
+        <div class="flex items-center">{contact.value}</div>
     </div>
 {/each}
 </div>

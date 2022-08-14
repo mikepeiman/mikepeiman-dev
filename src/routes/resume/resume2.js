@@ -38,7 +38,7 @@ const resume_items = [
             full: ''
         },
         achievements: [
-            { name: 'Ambitious solo project of approx. 9,500 LOC', description: '', url: '' },
+            { name: 'Ambitious solo project of approx. 9,500 LOC, for up to 8 players', description: '', url: '' },
             { name: 'Complex scoring - tallying 4 directions with variables & bonuses', description: '', url: '' },
             { name: 'A unique game settings menu using natural language flow, and realtime calculation of viable board sizes & options based on user selections', description: '', url: '' },
         ],
@@ -100,7 +100,7 @@ const resume_items = [
         achievements: [
             { name: 'Generating a hex-based grid, with all coordinates mapped and edges drawn', description: '', url: '' },
             { name: 'Implemented animated ship orbits, ship generation, and travel between stars', description: '', url: '' },
-            { name: '', description: '', url: '' },
+            { name: 'Intuitive UI with left click, left drag, and right click operations', description: '', url: '' },
         ],
         technologies_used: ['Sveltekit', 'SVG', ],
         skills_applied: ['Trigonometry', 'Hex grid generation', 'OOP'],

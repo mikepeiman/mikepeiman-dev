@@ -6,7 +6,7 @@
 			Frontend/Fullstack Developer
 		</h2>
 	</div>
-	<div class="text-gray-750 flex text-left pl-6 py-4 ">
+	<div class="text-gray-750 flex text-left pl-6 py-4 text-sm">
 		<p>
 			Mature developer with wide-ranging experience in solo projects.<br />Strong sensibilities in User Experience.<br />Excellent communicator, problem solver, and team player.
 		</p>

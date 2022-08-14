@@ -13,14 +13,14 @@
 
 <div class="flex flex-col text-left mt-0">
 	<div class="flex h-full border-b-2 border-winterblues-700 mx-4 ">
-		<h3 class=" text-gray-800 p-2 pl-2 text-xl">Projects</h3>
+		<h3 class=" text-gray-800 p-0 mt-4 pl-2 text-lg">Projects</h3>
 	</div>
 	{#if resume_items.length}
-		<ul class="flex flex-col resume-items-list px-6 py-2 w-auto relative ">
+		<ul class="flex flex-col resume-items-list px-6 py-2 w-auto relative break-inside-avoid">
 			{#each resume_items as project}
 				<div class="flex flex-col">
-					<li class="min-h-auto border-gray-700 my-2 px-0 ">
-						<div class="font-montserrat text-lg flex  items-center justify-between">
+					<li class="min-h-auto border-gray-700 mb-2 px-0 ">
+						<div class="font-montserrat text-base font-semibold flex  items-center justify-between">
                             <h3 class="">
                                 {project.name}
                             </h3>
@@ -28,8 +28,8 @@
                                 <ProjectLinks {project} />
                             </div>
                             </div>
-							<div class="project-heading grid grid-cols-9 w-full">
-								<div class="flex flex-col col-span-7 items-start">
+							<div class="grid grid-cols-10 w-full">
+								<div class="flex flex-col col-span-8 items-start">
 									<div class="text-xs">
 										{project.description.stub}
 										{project.description.brief}

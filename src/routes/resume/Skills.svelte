@@ -21,7 +21,7 @@
 
 <div class=" flex flex-col items-start text-xs justify-around m-2 w-full">
 	<div class="flex h-full w-full border-b-2 border-winterblues-700  ">
-		<h3 class=" text-gray-800 p-1 pl-2 text-lg">Skills</h3>
+		<h3 class=" text-gray-800 p-0 mt-2 pl-2 text-lg">Skills</h3>
 	</div>
 	<div class="flex flex-wrap my-2">
 		{#each tech_skills as skill}

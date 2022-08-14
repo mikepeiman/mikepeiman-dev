@@ -12,21 +12,27 @@
 	// create a function to print contents of .resume-items-list
 </script>
 
-<div class="wrapper bg-warmGray-400">
-	<div class="resume bg-warmGray-200 w-full h-full text-black font-poppins">
+<div class="wrapper bg-warmGray-400 ">
+	<div class="resume bg-warmGray-200 w-full h-full text-black font-poppins p-2">
 		<div class="resume-header ">
 			<ResumeHeader />
 			<div class="resume-subheader w-full">
-				<ContactInfo />
+				<div class="-mr-2">
+					<ContactInfo />
+				</div>
 				<SubTitle />
 			</div>
 		</div>
 
 		<div class="resume-main">
-			<div class="resume-left bg-warmGray-200 flex flex-col justify-start items-start w-full">
+			<div class="resume-left bg-warmGray-200 flex flex-col justify-start items-start w-full pr-2">
 				<Skills />
-				<Education />
-				<AboutMike />
+				<div class="-mt-[2px]">
+					<Education />
+				</div>
+				<div class="mt-4">
+					<AboutMike />
+				</div>
 			</div>
 			<div class="resume-right bg-white">
 				<Objectives />
