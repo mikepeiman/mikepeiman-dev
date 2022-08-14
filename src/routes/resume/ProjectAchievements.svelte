@@ -5,7 +5,7 @@
 
 {#each project.achievements as achievement}
 {#if achievement.name.length}
-	<ul class="flex flex-col items-start pt-1 italic">
+	<ul class="flex flex-col items-start pt-1 italic font-light">
 		<li class="text-xs w-auto ">
 			{achievement.name}
 			{#if achievement.description}

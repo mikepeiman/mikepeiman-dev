@@ -11,7 +11,7 @@
 	};
 </script>
 
-<div class="flex flex-col text-left mt-6">
+<div class="flex flex-col text-left mt-0">
 	<div class="flex h-full border-b-2 border-winterblues-700 mx-4 ">
 		<h3 class=" text-gray-800 p-2 pl-2 text-xl">Projects</h3>
 	</div>
