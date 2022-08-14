@@ -6,9 +6,9 @@
 			Frontend/Fullstack Developer
 		</h2>
 	</div>
-	<div class="text-gray-750 flex text-left pl-6 pt-4 ">
+	<div class="text-gray-750 flex text-left pl-6 py-4 ">
 		<p>
-			JavaScript, HTML, (S)CSS, Svelte/Kit, APIs.<br />Strong sense for CX, UX & UI.<br />
+			Mature developer with wide-ranging experience in solo projects.<br />Strong sensibilities in User Experience.<br />Excellent communicator, problem solver, and team player.
 		</p>
 	</div>
 </div>

@@ -1,56 +1,13 @@
 <script>
 	import Icon from '@iconify/svelte';
 	import ContactInfo from './ContactInfo.svelte';
-import Education from './Education.svelte';
-import Projects from './Projects.svelte';
-import AboutMike from './AboutMike.svelte';
-	import resume_items from './resume2.js';
-import ResumeHeader from './ResumeHeader.svelte';
+	import Education from './Education.svelte';
+	import Projects from './Projects.svelte';
+	import AboutMike from './AboutMike.svelte';
+	import ResumeHeader from './ResumeHeader.svelte';
 	import Skills from './Skills.svelte';
 	import SubTitle from './SubTitle.svelte';
-	import Summary from './Summary.svelte';
-	console.log(`🚀 ~ file: index.svelte ~ line 4 ~ resume_items`, resume_items);
-	const icons = {
-		fire1: 'wi:fire',
-		fire2: 'vaadin:fire',
-		fire3: 'mdi:fire',
-		fire4: 'fa:fire',
-		fire5: 'fa5:fire',
-		fire6: 'fa5:fire-alt',
-		fire7: 'el:fire',
-		fire8: 'eva:fire',
-		arrowCircle1: 'bi:arrow-down-circle-fill',
-		arrowCircle2: 'eva:arrow-circle-down-fill',
-		arrowCircleLeft2: 'eva:arrow-circle-left-fill',
-		arrowLeft: 'akar-icons:arrow-left',
-		home: 'bx:bxs-home-heart',
-		home2: 'charm:home',
-		print: 'cil:print',
-		print2: 'gridicons:print',
-		download: 'akar-icons:download',
-		print3: 'fluent:print-20-filled',
-		link: 'akar-icons:link-chain',
-		open1: 'fluent:open-folder-16-filled',
-		open2: 'majesticons:open',
-		location: 'fa6-solid:location-dot',
-		phone: 'fa:phone',
-		email: 'fa:envelope',
-		github: 'fa:github',
-		website: 'clarity:world-line',
-		linkedin: 'fa:linkedin'
-	};
-
-	function printFunction() {
-		console.log(`print function `);
-		let resume = document.querySelector('.resume-items-list');
-		console.log(`🚀 ~ file: index.svelte ~ line 40 ~ print ~ resume`, resume);
-		window.print();
-	}
-	function download() {
-		console.log(`print function `);
-		let resume = document.querySelector('.resume-items-list');
-		console.log(`🚀 ~ file: index.svelte ~ line 40 ~ print ~ resume`, resume);
-	}
+	import Objectives from './Objectives.svelte';
 
 	// create a function to print contents of .resume-items-list
 </script>
@@ -58,7 +15,7 @@ import ResumeHeader from './ResumeHeader.svelte';
 <div class="wrapper bg-warmGray-400">
 	<div class="resume bg-warmGray-200 w-full h-full text-black font-poppins">
 		<div class="resume-header ">
-				<ResumeHeader />
+			<ResumeHeader />
 			<div class="resume-subheader w-full">
 				<ContactInfo />
 				<SubTitle />
@@ -72,7 +29,7 @@ import ResumeHeader from './ResumeHeader.svelte';
 				<AboutMike />
 			</div>
 			<div class="resume-right bg-white">
-				<Summary />
+				<Objectives />
 				<Projects />
 			</div>
 		</div>

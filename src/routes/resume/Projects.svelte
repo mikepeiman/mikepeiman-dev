@@ -1,6 +1,6 @@
 <script>
 	import Icon from '@iconify/svelte';
-import ProjectAchievements from './ProjectAchievements.svelte';
+	import ProjectAchievements from './ProjectAchievements.svelte';
 	import ProjectLinks from './ProjectLinks.svelte';
 	import ProjectSkills from './ProjectSkills.svelte';
 	import resume_items from './resume2.js';
@@ -21,8 +21,8 @@ import ProjectAchievements from './ProjectAchievements.svelte';
 				<div class="flex flex-col">
 					<li class="min-h-auto border-gray-700 my-2 px-0 ">
 						<div class="font-montserrat text-lg flex items-end">
-							<div class="project-heading flex flex-col w-full">
-								<div class="flex flex-col items-start">
+							<div class="project-heading grid grid-cols-9 w-full">
+								<div class="flex flex-col col-span-7 items-start">
 									<h3 class="">
 										{project.name}
 									</h3>
@@ -30,9 +30,11 @@ import ProjectAchievements from './ProjectAchievements.svelte';
 										{project.description.stub}
 										{project.description.brief}
 									</div>
+                                    <ProjectAchievements {project} />
 								</div>
-                                <ProjectAchievements project={project} />
-								<ProjectSkills {project} />
+								<div class="col-span-2">
+                                    <ProjectSkills {project} />
+                                </div>
 								<ProjectLinks {project} />
 							</div>
 							<!-- <div class="italic border-b-2 border-opacity-100 border-orange-500">summary:</div> -->
