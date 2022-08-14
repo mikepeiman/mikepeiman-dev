@@ -20,37 +20,40 @@
 </script>
 
 <div
-	class="flex w-full justify-between items-center pl-4 bg-warmGray-200 w-full my-2 text-warmGray-400"
+	class="flex w-full justify-between items-center pl-4 bg-warmGray-200 w-full my-2 text-warmGray-900"
 >
-	<a href="/" class="print:hidden flex items-center  ">
-		<Icon
-			icon={icons.home2}
-			class=" w-8 h-8  transition:all duration-200  hover:text-winterblues-500 hover:cursor-pointer"
-		/>
-	</a>
+
 	<div class="flex w-full items-center justify-center relative text-center">
 		<h1 class="text-4xl font-montserrat  font-bold font-regular self-center mx-6 text-warmGray-900">
 			Michael Peiman
 		</h1>
 	</div>
-	<a
-		href=""
-		class="print:hidden  w-8 h-8 m-2 transition:all duration-200  hover:text-winterblues-500 hover:cursor-pointer"
-		on:click={() => download()}
-	>
-		<Icon
-			icon={icons.download}
-			class="ml-4 w-8 h-8  transition:all duration-200  hover:text-winterblues-500 hover:cursor-pointer"
-		/>
-	</a>
-	<a
-		href=""
-		class="print:hidden  w-8 h-8 mr-8 m-2 transition:all duration-200  hover:text-winterblues-500 hover:cursor-pointer"
-		on:click={() => printFunction()}
-	>
-		<Icon
-			icon={icons.print}
-			class="ml-4 w-8 h-8  transition:all duration-200  hover:text-winterblues-500 hover:cursor-pointer"
-		/>
-	</a>
+    <div class="flex bg-winterblues-900 px-4 rounded-lg absolute left-0 top-0 text-warmGray-200">
+        <a href="/" class="print:hidden flex items-center  ">
+                <Icon
+                    icon={icons.home2}
+                    class=" w-8 h-8  transition:all duration-200  hover:text-winterblues-700 hover:cursor-pointer"
+                />
+            </a>
+            <a
+                href=""
+                class="print:hidden  w-8 h-8 m-2 transition:all duration-200  hover:text-winterblues-700 hover:cursor-pointer"
+                on:click={() => download()}
+            >
+                <Icon
+                    icon={icons.download}
+                    class="ml-4 w-8 h-8  transition:all duration-200  hover:text-winterblues-700 hover:cursor-pointer"
+                />
+            </a>
+            <a
+                href=""
+                class="print:hidden  w-8 h-8 mr-8 m-2 transition:all duration-200  hover:text-winterblues-700 hover:cursor-pointer"
+                on:click={() => printFunction()}
+            >
+                <Icon
+                    icon={icons.print}
+                    class="ml-4 w-8 h-8  transition:all duration-200  hover:text-winterblues-700 hover:cursor-pointer"
+                />
+            </a>
+    </div>
 </div>
