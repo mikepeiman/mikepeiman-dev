@@ -98,9 +98,9 @@ const resume_items = [
             'One',
             'Two',
             'Three',
-        ],s
-        technologies_used: [],
-        skills_applied: [],
+        ],
+        technologies_used: [''],
+        skills_applied: [''],
         date_begun: '',
         date_completed: '',
         date_single: '',
@@ -116,35 +116,35 @@ const resume_items = [
         completion_total: 40,
         LOC: 500,
     },
-    {
-        name: '',
-        description: {
-          stub:  '',
-          brief: '',
-            full:  ''
-        },
-        achievements: [
-            'One',
-            'Two',
-            'Three',
-        ],
-        technologies_used: [],
-        skills_applied: [],
-        date_begun: '',
-        date_completed: '',
-        date_single: '',
-        deployment_url: '',
-        additional_links: [
-            {
-                name: '',
-                url: '',
-                description:''
-            }
-        ],
-        completion_MVP: 100,
-        completion_total: 40,
-        LOC: 500,
-    },
+    // {
+    //     name: '',
+    //     description: {
+    //       stub:  '',
+    //       brief: '',
+    //         full:  ''
+    //     },
+    //     achievements: [
+    //         'One',
+    //         'Two',
+    //         'Three',
+    //     ],
+    //     technologies_used: [],
+    //     skills_applied: [],
+    //     date_begun: '',
+    //     date_completed: '',
+    //     date_single: '',
+    //     deployment_url: '',
+    //     additional_links: [
+    //         {
+    //             name: '',
+    //             url: '',
+    //             description:''
+    //         }
+    //     ],
+    //     completion_MVP: 100,
+    //     completion_total: 40,
+    //     LOC: 500,
+    // },
 ]
 
 export default resume_items

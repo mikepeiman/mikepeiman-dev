@@ -29,7 +29,7 @@
 		email: 'fa:envelope',
 		github: 'fa:github',
 		website: 'clarity:world-line',
-		linkedin: 'fa:linkedin'
+		linkedin: 'fa:linkedin',
 	};
 
 	const tech_skills = [
@@ -47,7 +47,7 @@
 		{ name: 'Location', value: 'Kitchener, ON, Canada' },
 		{ name: 'Website', value: 'mikepeiman.dev' },
 		{ name: 'GitHub', value: 'github.com/mikepeiman' },
-		{ name: 'LinkedIn', value: 'linkedin.com/in/mikepeiman' }
+		{ name: 'LinkedIn', value: 'linkedin.com/in/mikepeiman' },
 	];
 
 	function printFunction() {
@@ -60,21 +60,24 @@
 		console.log(`print function `);
 		let resume = document.querySelector('.resume-items-list');
 		console.log(`🚀 ~ file: index.svelte ~ line 40 ~ print ~ resume`, resume);
+
 	}
 
 	// create a function to print contents of .resume-items-list
 </script>
 
-<div class="resume bg-warmGray-200 w-full h-full">
-	<div class="resume-header ">
+<div
+	class="resume flex flex-col w-full items-center justify-center relative z-0 print bg-warmGray-200 text-gray-900 font-poppins"
+>
+	<div class="flex flex-col w-full items-center text-center justify-center relative ">
 		<div
 			class="flex w-full justify-between items-center pl-4 bg-warmGray-200 w-full h-24 text-warmGray-400 "
 		>
 			<a href="/" class="print:hidden flex items-center  ">
 				<!-- <Icon
-			icon={icons.arrowLeft}
-			class=" w-8 h-8   transition:all duration-200  hover:text-winterblues-500 hover:cursor-pointer"
-		/> -->
+					icon={icons.arrowLeft}
+					class=" w-8 h-8   transition:all duration-200  hover:text-winterblues-500 hover:cursor-pointer"
+				/> -->
 				<Icon
 					icon={icons.home2}
 					class=" w-10 h-10  transition:all duration-200  hover:text-winterblues-500 hover:cursor-pointer"
@@ -108,10 +111,9 @@
 				/>
 			</a>
 		</div>
-		
-		<div class="resume-subheader w-full">
+		<div class="grid grid-cols-7 w-full">
 			<div
-				class=" flex flex-col items-start text-xs justify-around h-30 pr-6 p-2 bg-gray-900  mr-2 text-warmGray-200 "
+				class="col-span-2 flex flex-col items-start text-xs justify-around h-30 pr-6 p-2 bg-gray-900  mr-2 text-warmGray-200 "
 			>
 
 			{#each contact_info as contact}
@@ -127,7 +129,7 @@
 			{/each}
 
 			</div>
-			<div class=" flex flex-col">
+			<div class="col-span-5 flex flex-col">
 				<div class="flex flex-col w-full items-center justify-center relative text-left ">
 					<h2
 						class="text-xl text-bold text-warmGray-200 bg-gradient-to-r from-winterblues-700 to-fuchsia-800   w-full px-6 py-3 justify-center items-center align-middle self-baseline font-regular font-montserrat"
@@ -144,58 +146,87 @@
 			</div>
 		</div>
 	</div>
-	
-	<div class="resume-main bg-lime-200" >
-<div class="resume-left bg-fuchsia-400">
 
-</div>
-<div class="resume-right bg-orange-300">
+	<div class="w-full">
+		<!-- <div class="col-span-2"></div> -->
+		<div
+			class="flex flex-col h-24 w-full subhead-item flex items-start justify-start self-start pt-10"
+		>
+			<div
+				class="flex items-center justify-center col-span-2 h-full border-b-4 border-winterblues-700  "
+			>
+				<h3 class=" text-gray-800  text-2xl">Summary</h3>
+			</div>
+			<p class="col-span-5 pl-6">
+				I am just entering the job market seriously after many years working on my own projects and
+				doing small freelance jobs, therefore I am sharing the variety of projects I have worked on
+				to show the wide breadth and progression of my skills.
+			</p>
+		</div>
+	</div>
+	<div class="grid grid-cols-7 w-full pt-10">
+		<div class="col-span-2 bg-gray-800 text-warmGray-200 w-full h-auto " />
+		<div class="col-span-5  mr-4 ">
+			{#if resume_items.length}
+				<ul class="flex flex-col resume-items-list px-6 py-2 w-auto relative pt-10">
+					<!-- <h2 class="text-2xl m-4 font-montserrat absolute top-[50%] -rotate-45 text-[12rem] z-99 text-orange-500 text-opacity-40">
+            <p>W.I.P. / DRAFT</p>
+        </h2> -->
+					{#each resume_items as project}
+						<div class=" flex flex-col ">
+							<div class="flex flex-col text-sm flex-wrap">
+								<div class="tech-list flex flex-wrap my-2 text-warmGray-200">
+							{#each project.technologies_used as tech}
+								<div class="mr-2 mb-2 px-2 bg-blue-900 rounded-sm bg-opacity-80">{tech}</div>
+							{/each}
+							{#each project.skills_applied as skill}
+								<div class="px-2 mr-2 mb-2 bg-limegreen-800 bg-opacity-60 rounded-sm">{skill}</div>
+							{/each}
+						</div>
+							</div>
+							<li class="min-h-auto project  border-gray-700  my-2 px-4 pt-4">
+								<div class="project font-montserrat text-xl flex items-end ">
+									<div class="project-heading grid grid-cols-9 w-full">
+										<div class="flex items-center col-span-7">
+											<h3 class="font-bold border-b-[1px] border-winterblues-400 w-auto">
+												{project.name}
+											</h3>
+											<div class="ml-6 text-cyan-700 text-base">{project.description.stub}</div>
+										</div>
 
-</div>
+										{#if project.additional_links.length}
+											{#each project.additional_links as link}
+												<a href={link.url} target="_blank" class="group col-span-2 p-2 bg-warmGray-500 rounded-lg">
+													<Icon
+														icon={icons.link}
+														class="ml-2 self-center text-winterblues-400 group-hover:hidden group-hover:text-winterblues-700"
+													/>
+													<Icon
+														icon={icons.open1}
+														class="rotate-90 hidden group-hover:flex ml-2 scale-125 self-center text-winterblues-100 hover:cursor-pointer hover:text-winterblues-700"
+													/>
+												</a>
+											{/each}
+										{/if}
+									</div>
+									<!-- <div class="italic border-b-2 border-opacity-100 border-orange-500">summary:</div> -->
+								</div>
+								<div class="text-base my-2">{project.description.brief}</div>
+							</li>
+							<!-- <div class="flex flex-col justify-center">
+					<div class="flex">{project.LOC ? project.LOC : 'n/a'}</div>
+					<div class="flex">{project.completion_MVP ? project.completion_MVP : 'n/a'}</div>
+					<div class="flex">{project.completion_total ? project.completion_total : 'n/a'}</div>
+				</div> -->
+						</div>
+					{/each}
+				</ul>
+			{/if}
+		</div>
 	</div>
 </div>
 
 <style lang="scss">
-	.resume {
-		display: grid;
-		// grid-template-columns: 1fr 1fr;
-		grid-gap: 1rem;
-		grid-template-rows: auto 1fr;
-
-		grid-template-areas:
-			'header'
-			'main';
-	}
-	.resume-header {
-		grid-area: header;
-
-	}
-	.resume-subheader {
-				display: grid;
-		grid-template-columns: 2fr 5fr;
-	}
-	.resume-main {
-		grid-area: main;
-		display: grid;
-		grid-template-columns: 2fr 5fr;
-		grid-template-areas: 'left right';
-	}
-	.resume-left {
-		grid-area: left;
-		display: grid;
-		grid-template-rows: auto 1fr;
-		grid-template-areas:
-			'header'
-			'main';
-	}
-	.resume-right {
-		grid-area: right;
-		display: grid;
-		grid-template-rows: auto 1fr;
-		grid-template-areas:
-			'header'
-			'main';
-	}
 	// .resume-items-list {
 	// 	display: grid;
 	// 	flex-direction: column;
