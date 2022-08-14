@@ -2,14 +2,14 @@ const resume_items = [
     {
         name: 'Mikepeiman.dev',
         description: {
-          stub:  'My developer portfolio and blog.',
-          brief: 'Coded from scratch in Sveltekit with TailwindCSS, using GraphCMS cloud (now Hygraph) as CMS.',
-            full:  'Coded from scratch in Sveltekit with TailwindCSS, using GraphCMS cloud (now Hygraph) as CMS.'
+            stub: 'My developer portfolio and blog.',
+            brief: 'Coded from scratch in Sveltekit with TailwindCSS, using GraphCMS cloud (now Hygraph) as CMS.',
+            full: 'Coded from scratch in Sveltekit with TailwindCSS, using GraphCMS cloud (now Hygraph) as CMS.'
         },
         achievements: [
-            'One',
-            'Two',
-            'Three',
+            { name: '', description: '', url: '' },
+            { name: '', description: '', url: '' },
+            { name: '', description: '', url: '' },
         ],
         technologies_used: ['Sveltekit', 'TailwindCSS', 'GitHub', 'GraphCMS/HyGraph'],
         skills_applied: ['Frontend Design', 'Text parsing', 'API access'],
@@ -32,17 +32,17 @@ const resume_items = [
     {
         name: 'Super-tic-tac-toe',
         description: {
-          stub:  'A complex version of Tic-Tac-Toe with many options.',
-          brief: 'Custom-built in Sapper; my most ambitious project thus far in terms of number of LOC (approx. 9,500), features and UI.',
-            full:  ''
+            stub: 'A complex version of Tic-Tac-Toe with many options.',
+            brief: 'Custom-built in Sapper; my most ambitious project thus far in terms of number of LOC (approx. 9,500), features and UI.',
+            full: ''
         },
         achievements: [
-            'One',
-            'Two',
-            'Three',
+            { name: '', description: '', url: '' },
+            { name: '', description: '', url: '' },
+            { name: '', description: '', url: '' },
         ],
         technologies_used: ['Svelte', 'Sapper'],
-        skills_applied: ['Forms and calculations', 'Text parsing', 'API access'],
+        skills_applied: ['Forms and calculations', 'Text parsing', 'API access', 'Custom styles', 'CSS variables'],
         date_begun: 'Dec 2019',
         date_completed: 'Feb 2020',
         date_single: 'Dec 2019 - Feb 2020',
@@ -51,7 +51,7 @@ const resume_items = [
             {
                 name: '',
                 url: '',
-                description:''
+                description: ''
             }
         ],
         completion_MVP: 100,
@@ -61,14 +61,14 @@ const resume_items = [
     {
         name: 'Discord clone',
         description: {
-          stub:  'A pixel-perfect replication of Discord UI.',
-          brief: 'Implemented from an Egghead tutorial using React for  a pixel-perfect replication of Discord UI; I adapted from the tutorial to use SvelteKit instead of React.',
-            full:  ''
+            stub: 'A pixel-perfect replication of Discord UI.',
+            brief: 'Implemented from an Egghead tutorial using React for  a pixel-perfect replication of Discord UI; I adapted from the tutorial to use SvelteKit instead of React.',
+            full: ''
         },
         achievements: [
-            'One',
-            'Two',
-            'Three',
+            { name: '', description: '', url: '' },
+            { name: '', description: '', url: '' },
+            { name: '', description: '', url: '' },
         ],
         technologies_used: [],
         skills_applied: [],
@@ -80,7 +80,7 @@ const resume_items = [
             {
                 name: '',
                 url: '',
-                description:''
+                description: ''
             }
         ],
         completion_MVP: 100,
@@ -90,14 +90,14 @@ const resume_items = [
     {
         name: 'MathSheets',
         description: {
-          stub:  'An app for generating elementary math worksheets to user specifications.',
-          brief: 'I made this app primarily to help with homeschooling my daughter, specifically to generate math problem worksheets of random problems to user-specified criteria in a nice printable format.',
-            full:  ''
+            stub: 'An app for generating elementary math worksheets to user specifications.',
+            brief: 'I made this app primarily to help with homeschooling my daughter, specifically to generate math problem worksheets of random problems to user-specified criteria in a nice printable format.',
+            full: ''
         },
         achievements: [
-            'One',
-            'Two',
-            'Three',
+            { name: '', description: '', url: '' },
+            { name: '', description: '', url: '' },
+            { name: '', description: '', url: '' },
         ],
         technologies_used: [''],
         skills_applied: [''],
@@ -109,42 +109,42 @@ const resume_items = [
             {
                 name: '',
                 url: '',
-                description:''
+                description: ''
             }
         ],
         completion_MVP: 100,
         completion_total: 40,
         LOC: 500,
     },
-    // {
-    //     name: '',
-    //     description: {
-    //       stub:  '',
-    //       brief: '',
-    //         full:  ''
-    //     },
-    //     achievements: [
-    //         'One',
-    //         'Two',
-    //         'Three',
-    //     ],
-    //     technologies_used: [],
-    //     skills_applied: [],
-    //     date_begun: '',
-    //     date_completed: '',
-    //     date_single: '',
-    //     deployment_url: '',
-    //     additional_links: [
-    //         {
-    //             name: '',
-    //             url: '',
-    //             description:''
-    //         }
-    //     ],
-    //     completion_MVP: 100,
-    //     completion_total: 40,
-    //     LOC: 500,
-    // },
+    {
+        name: 'Additional Projects',
+        description: {
+            stub: 'Several other projects that I have worked on that I am proud of:',
+            brief: '',
+            full: ''
+        },
+        achievements: [
+            { name: 'Pax clone', description: 'Clone of Pax Galaxia strategy game.', url: 'https://stars.mikepeiman.dev' },
+            { name: 'Screeps', description: 'Achieved GCL 4 in this JS coding game.', url: 'https://screeps.com/a/#!/profile/snowtigr' },
+            { name: '', description: '', url: '' },
+        ],
+        technologies_used: [],
+        skills_applied: [],
+        date_begun: '',
+        date_completed: '',
+        date_single: '',
+        deployment_url: '',
+        additional_links: [
+            {
+                name: '',
+                url: '',
+                description: ''
+            }
+        ],
+        completion_MVP: 100,
+        completion_total: 40,
+        LOC: 500,
+    },
 ]
 
 export default resume_items
