@@ -1,12 +1,15 @@
 <script>
 import html2canvas from 'html2canvas';
 import jsPDF from 'jspdf';
+import { page } from '$app/stores';
 	import Icon from '@iconify/svelte';
 	const icons = {
 		home2: 'charm:home',
 		print: 'cil:print',
 		download: 'akar-icons:download'
 	};
+    $page.url
+    console.log(`🚀 ~ file: ResumeHeader.svelte ~ line 12 ~ $page.url`, $page)
 
     function printFunction() {
 		console.log(`print function `);
@@ -44,14 +47,13 @@ import jsPDF from 'jspdf';
                 />
             </a>
             <a
-                href=""
-                class="print:hidden  w-8 h-8 m-2 transition:all duration-200  hover:text-winterblues-700 hover:cursor-pointer"
-                on:click={() => download()}
+                href="src/routes/resume/resume-Mike-Peiman-one-pager.pdf" download="resume-Mike-Peiman-one-pager.pdf"
+                class="print:hidden  w-8 h-8 m-2 transition:all duration-200  hover:text-winterblues-700 hover:cursor-pointer"                
             >
-                <Icon
-                    icon={icons.download}
-                    class="ml-4 w-8 h-8  transition:all duration-200  hover:text-winterblues-700 hover:cursor-pointer"
-                />
+                    <Icon
+                        icon={icons.download}
+                        class="ml-4 w-8 h-8  transition:all duration-200  hover:text-winterblues-700 hover:cursor-pointer"
+                    />
             </a>
             <a
                 href=""
