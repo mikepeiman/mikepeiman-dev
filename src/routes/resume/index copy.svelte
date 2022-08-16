@@ -1,6 +1,6 @@
 <script>
 	import Icon from '@iconify/svelte';
-	import resume_items from './resume2.js';
+
 	console.log(`🚀 ~ file: index.svelte ~ line 4 ~ resume_items`, resume_items);
 	const icons = {
 		fire1: 'wi:fire',
@@ -29,7 +29,7 @@
 		email: 'fa:envelope',
 		github: 'fa:github',
 		website: 'clarity:world-line',
-		linkedin: 'fa:linkedin',
+		linkedin: 'fa:linkedin'
 	};
 
 	const tech_skills = [
@@ -47,7 +47,7 @@
 		{ name: 'Location', value: 'Kitchener, ON, Canada' },
 		{ name: 'Website', value: 'mikepeiman.dev' },
 		{ name: 'GitHub', value: 'github.com/mikepeiman' },
-		{ name: 'LinkedIn', value: 'linkedin.com/in/mikepeiman' },
+		{ name: 'LinkedIn', value: 'linkedin.com/in/mikepeiman' }
 	];
 
 	function printFunction() {
@@ -60,7 +60,6 @@
 		console.log(`print function `);
 		let resume = document.querySelector('.resume-items-list');
 		console.log(`🚀 ~ file: index.svelte ~ line 40 ~ print ~ resume`, resume);
-
 	}
 
 	// create a function to print contents of .resume-items-list
@@ -115,19 +114,15 @@
 			<div
 				class="col-span-2 flex flex-col items-start text-xs justify-around h-30 pr-6 p-2 bg-gray-900  mr-2 text-warmGray-200 "
 			>
-
-			{#each contact_info as contact}
-
-			<div class="icon-group flex mb-2">
-				
-				<Icon
-					icon={icons[contact.name.toLowerCase()]}
-					class="ml-4 w-4 h-4 mr-2  transition:all duration-200  hover:text-winterblues-500 hover:cursor-pointer"
-				/>
-				<div class="flex ">{contact.value}</div>
-			</div>
-			{/each}
-
+				{#each contact_info as contact}
+					<div class="icon-group flex mb-2">
+						<Icon
+							icon={icons[contact.name.toLowerCase()]}
+							class="ml-4 w-4 h-4 mr-2  transition:all duration-200  hover:text-winterblues-500 hover:cursor-pointer"
+						/>
+						<div class="flex ">{contact.value}</div>
+					</div>
+				{/each}
 			</div>
 			<div class="col-span-5 flex flex-col">
 				<div class="flex flex-col w-full items-center justify-center relative text-left ">
@@ -176,13 +171,15 @@
 						<div class=" flex flex-col ">
 							<div class="flex flex-col text-sm flex-wrap">
 								<div class="tech-list flex flex-wrap my-2 text-warmGray-200">
-							{#each project.technologies_used as tech}
-								<div class="mr-2 mb-2 px-2 bg-blue-900 rounded-sm bg-opacity-80">{tech}</div>
-							{/each}
-							{#each project.skills_applied as skill}
-								<div class="px-2 mr-2 mb-2 bg-limegreen-800 bg-opacity-60 rounded-sm">{skill}</div>
-							{/each}
-						</div>
+									{#each project.technologies_used as tech}
+										<div class="mr-2 mb-2 px-2 bg-blue-900 rounded-sm bg-opacity-80">{tech}</div>
+									{/each}
+									{#each project.skills_applied as skill}
+										<div class="px-2 mr-2 mb-2 bg-limegreen-800 bg-opacity-60 rounded-sm">
+											{skill}
+										</div>
+									{/each}
+								</div>
 							</div>
 							<li class="min-h-auto project  border-gray-700  my-2 px-4 pt-4">
 								<div class="project font-montserrat text-xl flex items-end ">
@@ -196,7 +193,11 @@
 
 										{#if project.additional_links.length}
 											{#each project.additional_links as link}
-												<a href={link.url} target="_blank" class="group col-span-2 p-2 bg-warmGray-500 rounded-lg">
+												<a
+													href={link.url}
+													target="_blank"
+													class="group col-span-2 p-2 bg-warmGray-500 rounded-lg"
+												>
 													<Icon
 														icon={icons.link}
 														class="ml-2 self-center text-winterblues-400 group-hover:hidden group-hover:text-winterblues-700"
