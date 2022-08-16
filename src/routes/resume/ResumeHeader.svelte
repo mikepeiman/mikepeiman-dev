@@ -47,7 +47,7 @@ import { page } from '$app/stores';
                 />
             </a>
             <a
-                href="src/routes/resume/resume-Mike-Peiman-one-pager.pdf" download="resume-Mike-Peiman-one-pager.pdf"
+                href="/resume-Mike-Peiman-one-pager.pdf" download="resume-Mike-Peiman-one-pager.pdf"
                 class="print:hidden  w-8 h-8 m-2 transition:all duration-200  hover:text-winterblues-700 hover:cursor-pointer"                
             >
                     <Icon
