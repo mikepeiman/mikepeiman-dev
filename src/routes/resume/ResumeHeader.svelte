@@ -1,4 +1,6 @@
 <script>
+import html2canvas from 'html2canvas';
+import jsPDF from 'jspdf';
 	import Icon from '@iconify/svelte';
 	const icons = {
 		home2: 'charm:home',
@@ -14,7 +16,13 @@
 	}
 	function download() {
 		console.log(`print function `);
-		let resume = document.querySelector('.resume-items-list');
+		let resume = document.querySelector('#resume');
+        html2canvas(resume).then(canvas => {
+            let imgData = canvas.toDataURL('image/png');
+            let pdf = new jsPDF('p', 'mm', 'a4');
+            pdf.addImage(imgData, 'JPEG', 0, 0);
+            pdf.save('resume.pdf');
+        });
 		console.log(`🚀 ~ file: index.svelte ~ line 40 ~ print ~ resume`, resume);
 	}
 </script>

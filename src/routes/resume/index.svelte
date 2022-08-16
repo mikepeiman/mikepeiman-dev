@@ -13,7 +13,7 @@
 </script>
 
 <div class="wrapper bg-warmGray-400 ">
-	<div class="resume bg-warmGray-200 w-full h-full text-black font-poppins p-2">
+	<div id="resume" class="resume bg-warmGray-200 w-full h-full text-black font-poppins p-2">
 		<div class="resume-header ">
 			<ResumeHeader />
 			<div class="resume-subheader w-full">
