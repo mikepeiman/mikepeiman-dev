@@ -1,6 +1,6 @@
 {
-	"name": "kitplate",
-	"version": "0.0.1",
+	"name": "mikepeiman.dev",
+	"version": "1.0.0",
 	"scripts": {
 		"dev": "env-cmd svelte-kit dev",
 		"build": "svelte-kit build",
