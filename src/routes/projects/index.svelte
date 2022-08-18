@@ -1,5 +1,6 @@
 <script>
 	import MetabrainCanvas from '$components/MetabrainCanvas.svelte';
+	import projects from '$static/projects.js';
 	import Icon from '@iconify/svelte';
 
 	const icons = {
@@ -41,16 +42,27 @@
 		<div
 			class="flex flex-col py-8 my-4 w-full bg-black bg-opacity-25 text-xl md:text-2xl lg:text-3xl xl:text-4xl font-montserrat"
 		>
-			<h2 class="p-2">... nothing to see here yet.</h2>
-			<h2 class="p-2">
-				But there have been a lot of things germinating over this past decade or so...
-			</h2>
-			<h2 class="p-2">
-				Keep an eye out. Who knows when things will sprout up?
-			</h2>
+			{#each projects as project}
+				<div class="project p-4 m-4 w-full h-24 bg-warmGray-900 flex items-start">
+					<div class="flex w-full">
+						<h2>{project.name}</h2>
+						<div class="flex  w-full h-auto items-end justify-end">
+							<div class="flex flex-col flex-wrap w-[24ch]">
+								<div class="flex metadata text-sm items-center bg-yellow-400 text-gray-750 rounded-md px-2 py-0">Type: {project.type}</div>
+								<div class="flex metadata text-sm items-center bg-yellow-500 text-gray-750 rounded-md px-2 py-0">Genre: {project.genre}</div>
+								<div class="flex metadata text-sm items-center bg-yellow-600 text-gray-750 rounded-md px-2 py-0 flex-wrap">Purpose: {project.purpose}</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			{/each}
 		</div>
 	</div>
 	<!-- <div class="absolute w-screen h-screen top-0 left-0 z-0">
 		<MetabrainCanvas />
 	</div> -->
 </div>
+
+<style lang="scss">
+
+</style>
