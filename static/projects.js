@@ -85,7 +85,7 @@ const projects = [
         skills_applied: ['Forms', 'Calculations', 'User Auth'],
         date_begun: '',
         date_completed: '',
-        date_single: '',
+        date_single: 'Feb 2022',
         deployment_url: 'https://math.curriculumfor.life/',
         short_url: 'math.curriculumfor.life',
         additional_links: [
