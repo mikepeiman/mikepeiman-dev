@@ -9,7 +9,7 @@
 	};
 </script>
 
-<div class="flex flex-col w-screen h-full relative align-center justify-center ">
+<div class="projects w-[80vw] flex flex-col w-screen h-full relative align-center justify-center ">
 	<div class="icon-nav w-full px-20 group">
 		<a
 			href="/"
@@ -38,31 +38,33 @@
 		</a>
 	</div>
 	<div class="flex flex-col w-full h-full align-center justify-center text-center">
-		<h1 class="text-6xl md:text-[5rem] lg:text-[7rem] xl:text-[10rem] font-display">Projects</h1>
+		<h1 class="text-6xl text-[2.5rem] sm:text-[3rem] md:text-[4rem] lg:text-[5rem] xl:text-[6rem] font-display">Projects</h1>
 		<div
 			class="flex flex-col py-8 my-4 w-full bg-black bg-opacity-25 text-xl md:text-2xl lg:text-3xl xl:text-4xl font-montserrat"
 		>
 			{#each projects as project}
-				<div class="project p-4 m-4 w-full h-24 bg-warmGray-900 flex items-start">
-					<div class="flex w-full">
-						<h2>{project.name}</h2>
-						<div class="flex  w-full h-auto items-end justify-end">
-							<div class="flex flex-col flex-wrap w-[24ch]">
-								<div class="flex metadata text-sm items-center bg-yellow-400 text-gray-750 rounded-md px-2 py-0">Type: {project.type}</div>
-								<div class="flex metadata text-sm items-center bg-yellow-500 text-gray-750 rounded-md px-2 py-0">Genre: {project.genre}</div>
-								<div class="flex metadata text-sm items-center bg-yellow-600 text-gray-750 rounded-md px-2 py-0 flex-wrap">Purpose: {project.purpose}</div>
-							</div>
-						</div>
+				<div class="project relative p-8 my-6  bg-warmGray-900 grid grid-cols-12 items-start">
+					<div class="flex col-span-12 mb-2 items-start justify-start text-left flex-wrap w-full">
+						<div class="flex metadata text-sm mr-4  text-gray-300 rounded-sm px-2 py-0">Type: <div class="bg-yellow-700 bg-opacity-40 text-gray-300 rounded-sm px-2 ml-1 py-0">{project.type}</div></div>
+						<div class="flex metadata text-sm mr-4  text-gray-300 rounded-sm px-2 py-0">Genre: <div class="bg-yellow-600 bg-opacity-40 text-gray-300 rounded-sm px-2 ml-1 py-0">{project.genre}</div></div>
+						<div class="flex metadata text-sm mr-4  text-gray-300 rounded-sm px-2 py-0">Purpose: <div class="bg-yellow-500 bg-opacity-40 text-gray-300 rounded-sm px-1 ml-2 py-0">{project.purpose}</div></div>
+					</div>
+					<div class="flex flex-col col-span-7 text-left w-full">
+						<h2 class=" w-full border-b-2 border-cyan-300 mb-6 pb-0 h-fit">{project.name}</h2>
+						<div class="flex text-sm font-sans">{project.description.full.length ? project.description.full : project.description.stub + ' ' + project.description.brief}</div>
+					</div>
+					<div class="flex col-span-5 w-full h-auto items-end justify-end">
+
 					</div>
 				</div>
 			{/each}
 		</div>
 	</div>
-	<!-- <div class="absolute w-screen h-screen top-0 left-0 z-0">
-		<MetabrainCanvas />
-	</div> -->
+
 </div>
 
 <style lang="scss">
-
+.projects {
+	// max-width: 60rem;
+}
 </style>
