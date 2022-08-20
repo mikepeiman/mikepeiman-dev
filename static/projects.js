@@ -176,11 +176,11 @@ const projects = [
             full: ''
         },
         achievements: [
-            { name: "", description: '', url: '' },
+            { name: "Fantasy Name Generator (Markov chain)", description: "Integrated 'Fantasy Generator' name-generation library", url: 'https://github.com/alxgiraud/fantasygen' },
             { name: "", description: '', url: '' },
             { name: "", description: '', url: '' },
         ],
-        technologies_used: ['Svelte'],
+        technologies_used: ['Svelte', 'Sapper'],
         skills_applied: ['Stores', 'Mock data generation', 'localStorage'],
         date_begun: '',
         date_completed: '',
@@ -197,6 +197,8 @@ const projects = [
         completion_MVP: 100,
         completion_total: 100,
         LOC: 500,
+        constructive_review: {date: "Aug 2022", comments: ["Having just reinstalled this repo locally, sadly some features which were working three years ago no longer are. The UI still shows up, but interactivity is lacking.",
+        "Looking into the codebase, I am both impressed and distressed with what I find - a good amount of complexity, and the skeleton for some real interactivity. However, the codebase is poorly organized, lacking structure, and with a monolithic route-component which is very difficult to understand.","This app is a very clear case in point for why we need to develop thoughtful, well-organized and well-commented code - future maintainability is crucial.",]},
     },
     {
         name: 'DOTA2 Hero Stats viewer',

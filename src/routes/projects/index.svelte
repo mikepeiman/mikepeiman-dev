@@ -34,7 +34,7 @@
 				>
 					Home
 				</h1>
-			</div>
+			</div>	
 		</a>
 	</div>
 	<div class="flex flex-col w-full h-full align-center justify-center text-center">
