@@ -2,7 +2,7 @@
 	"name": "mikepeiman.dev",
 	"version": "1.0.0",
 	"scripts": {
-		"dev": "env-cmd svelte-kit dev",
+		"dev": "env-cmd svelte-kit dev --port 3333",
 		"build": "svelte-kit build",
 		"preview": "svelte-kit preview",
 		"lint": "prettier --ignore-path .gitignore --check --plugin-search-dir=. .",
