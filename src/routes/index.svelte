@@ -1,7 +1,7 @@
 <script context="module">
 	export const load = async ({ fetch }) => {
 		const res = await fetch('../blog.json');
-		// console.log(`🚀 ~ file: posts index.svelte ~ line 4 ~ load ~ res`, res)
+		console.log(`🚀 ~ file: posts index.svelte ~ line 4 ~ load ~ res`, res)
 		if (res.ok) {
 			const { posts } = await res.json();
 			return { props: { posts } };
@@ -27,7 +27,9 @@
 	$: console.log(`🚀 ~ file: index.svelte ~ line 24 ~ path`, path);
 	// import Posts from '$components/Posts.svelte';
 	export let posts;
-	let selectedPosts = posts?.slice(0, 3);
+	let dateOrderedPosts = posts.sort((p1, p2) => (new Date(p2.date)) - (new Date(p1.date)))
+    console.log(`🚀 ~ file: index.svelte ~ line 31 ~ dateOrderedPosts`, dateOrderedPosts)
+	let selectedPosts = dateOrderedPosts?.slice(0, 3);
 	console.log(`🚀 ~ file: index.svelte ~ line 4 ~ posts`, posts);
 	let projects = [
 		{
