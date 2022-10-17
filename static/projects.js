@@ -415,6 +415,36 @@ const projects = [
         completion_total: 100,
         LOC: 500,
     },
+    {
+        name: 'YouTube Comments Saver',
+        type: 'platform API project',
+        genre: 'social media',
+        purpose: 'Saving YouTube comments to a database; potentially saving them from loss to censorship.',
+        description: {
+            stub: "App capable of fetching channel IDs, video IDs, fetching and displaying all comments",
+            brief: "",
+            full: "I was devastated to see excellent YouTube channels being censored, and I wanted to save their comments to a database in case they were lost. This app is capable of fetching channel IDs, video IDs, fetching and displaying all comments - but one of my favorite channels was deleted entirely before I could save the comments, and I lost motivation and have let the project languish."
+        },
+        achievements: [
+            { name: "", description: '', url: '' },
+            { name: "", description: '', url: '' },
+            { name: "", description: '', url: '' },
+        ],
+        technologies_used: ['JavaScript', 'YouTube API', 'Python', 'Sveltekit'],
+        skills_applied: ['API access', 'Python interop'],
+        date_begun: 'Jan 2022',
+        date_completed: 'Feb 2022',
+        date_single: 'Jan 2022',
+        deployment_url: '',
+        short_url: '',
+        additional_links: [
+            { type: "", description: 'C', url: '' }
+        ],
+        completion_MVP: 80,
+        completion_total: 80,
+        status: 'abandoned',
+        LOC: 500,
+    },
 ]
 
 export default projects

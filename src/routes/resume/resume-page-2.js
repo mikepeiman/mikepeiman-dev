@@ -1,35 +1,35 @@
 const resume_items = [
-    // {
-    //     name: 'Mikepeiman.dev',
-    //     description: {
-    //         stub: 'My developer portfolio, resume and blog.',
-    //         brief: 'Fully hand-coded in Sveltekit with TailwindCSS, using Hygraph as CMS.',
-    //         full: 'Coded from scratch in Sveltekit with TailwindCSS, using GraphCMS cloud (now Hygraph) as CMS.'
-    //     },
-    //     achievements: [
-    //         { name: 'Fetch content from cloud CMS using "module" context and props', description: '', url: '' },
-    //         { name: 'Custom generated color palettes added to TailwindCSS', description: '', url: '' },
-    //         { name: 'Learned how to design & format for print media (resume) & .pdf download', description: '', url: '' },
-    //     ],
-    //     technologies_used: ['Sveltekit', 'TailwindCSS', 'Vercel', 'HyGraph', 'GraphQL'],
-    //     skills_applied: ['Design',],
-    //     date_begun: '',
-    //     date_completed: '',
-    //     date_single: 'Jan 2022',
-    //     deployment_url: 'https://www.mikepeiman.dev',
-    //     short_url: 'mikepeiman.dev',
-    //     additional_links: [
-    //         {
-    //             name: 'Inspired by Crinkles.io',
-    //             url: 'https://www.crinkles.io',
-    //             notes:
-    //                 'With great thanks to Kevin Pennekamp for the visual inspiration, I followed his example by eye and coded my own site from scratch.'
-    //         }
-    //     ],
-    //     completion_MVP: 100,
-    //     completion_total: 40,
-    //     LOC: 100,
-    // },
+    {
+        name: 'Mikepeiman.dev',
+        description: {
+            stub: 'My developer portfolio, resume and blog.',
+            brief: 'Fully hand-coded in Sveltekit with TailwindCSS, using Hygraph as CMS.',
+            full: 'Coded from scratch in Sveltekit with TailwindCSS, using GraphCMS cloud (now Hygraph) as CMS.'
+        },
+        achievements: [
+            { name: 'Fetch content from cloud CMS using "module" context and props', description: '', url: '' },
+            { name: 'Custom generated color palettes added to TailwindCSS', description: '', url: '' },
+            { name: 'Learned how to design & format for print media (resume) & .pdf download', description: '', url: '' },
+        ],
+        technologies_used: ['Sveltekit', 'TailwindCSS', 'Vercel', 'HyGraph', 'GraphQL'],
+        skills_applied: ['Design',],
+        date_begun: '',
+        date_completed: '',
+        date_single: 'Jan 2022',
+        deployment_url: 'https://www.mikepeiman.dev',
+        short_url: 'mikepeiman.dev',
+        additional_links: [
+            {
+                name: 'Inspired by Crinkles.io',
+                url: 'https://www.crinkles.io',
+                notes:
+                    'With great thanks to Kevin Pennekamp for the visual inspiration, I followed his example by eye and coded my own site from scratch.'
+            }
+        ],
+        completion_MVP: 100,
+        completion_total: 40,
+        LOC: 100,
+    },
     {
         name: 'Super-tic-tac-toe',
         description: {

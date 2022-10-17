@@ -155,7 +155,7 @@ module.exports = {
           700: "#012d15",
           800: "#001e0e",
           900: "#000f07"
-},
+        },
         lincolngreen: {
           100: "#ccdecd",
           200: "#99be9b",
